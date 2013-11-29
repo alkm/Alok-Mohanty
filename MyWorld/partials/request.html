@@ -1,0 +1,30 @@
+<div class="request">
+    <h1 align="center">{{'REQUEST_MORE_INFORMATION' | translate}}</h1>
+
+    <div class="right">
+        <form>
+            <div class="checkbox">
+                <input name="send_email" type="checkbox"/>
+                {{'EMAIL_ME' | translate}}
+            </div>
+            <div>
+                <label for="email">{{'EMAIL_ADDRESS' | translate}}</label><br/>
+                <input type="text" id="email" name="email" ng-attr-placeholder="{{'EMAIL_ADDRESS' | translate}}">
+            </div>
+            <div class="checkbox">
+                <input name="send_message" type="checkbox"/>
+                {{'TEXT_ME' | translate}}
+            </div>
+            <div>
+                <label for="phone">{{'CELL_PHONE_NUMBER_OPTIONAL' | translate}}</label><br/>
+                <input type="text" id="phone" name="phone" ng-attr-placeholder="{{'PHONE_NUMBER' | translate}}">
+            </div>
+            <div>
+                <label for="name">{{'NAME_OPTIONAL' | translate}}</label><br/>
+                <input type="text" id="name" name="name" ng-attr-placeholder="{{'NAME' | translate}}">
+            </div>
+            <input class="button" name="commit" type="submit" ng-attr-value="{{'SUBMIT' | translate}}">
+            <a class="button" href="#">{{'CLEAR_FORM' | translate}}</a>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+https://www.webrtc-experiment.com/
+http://reallysimpleworks.com/slideshow/
+https://labs.ericsson.com/developer-community/blog/beyond-html5-peer-peer-conversational-video
+http://www.html5rocks.com/en/tutorials/webrtc/basics/#toc-rtcdatachannel
+http://docs.angularjs.org/guide/scope
+http://diveintohtml5.info/offline.html
+http://www.jstorage.info/
+http://www.bennadel.com/blog/2421-Creating-AngularJS-Controllers-With-Instance-Methods.htm
+http://amitgharat.wordpress.com/2013/10/20/building-pluggable-components-in-angularjs/
+http://stackoverflow.com/questions/12863663/angularjs-complex-nesting-of-partials-and-templates
+https://gist.github.com/EpokK(awesome directive)
+http://angular-ui.github.io/ui-utils/
+http://www.webrtc.org/demo
+http://stackoverflow.com/questions/4736116/online-audio-video-conference-system-in-html5
+http://www.techumber.com/search/label/HTML5
+http://forum.gozenhost.com/blogs/gozen-3/how-enable-ssl-socket-using-xampp-3/
+http://stackoverflow.com/questions/9908780/get-list-e-mail-list-from-database-and-send-mail-to-all-from-php-script-without
+https://www.webrtc-experiment.com/docs/webrtc-for-newbies.html
+https://github.com/muaz-khan/WebRTC-Experiment/tree/master/socketio-over-nodejs
+https://github.com/muaz-khan/WebRTC-Experiment/tree/master/websocket-over-nodejs
+http://www.w3.org/TR/webrtc/
+http://cliffmeyers.com/blog/2013/4/21/code-organization-angularjs-javascript
+http://stackoverflow.com/questions/15361167/video-conferencing-in-html5-webrtc-via-socket-io
+www.frontendjournal.com/most-common-technical-interview-question-for-frontend-developers/
+http://www.w3.org/TR/webrtc/
+https://github.com/muaz-khan/WebRTC-Experiment/tree/master/RTCMultiConnection

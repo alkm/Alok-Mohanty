@@ -1,0 +1,13 @@
+<form id="loginForm" ng-show="onIndexScreen()">
+	<div>
+		<div class="formElements" >
+			<label class="componentLabel">Email</label>
+			<input type="text" ng-model="loginEmail" value="loginEmail" id="lEmail">
+			<label class="componentLabel">Password</label>
+			<input type="password" ng-model="loginPassword" value="loginPassword" id="lPassword">
+			<a class="button" ng-click="loginClick()">Log In</a>
+			<a ng-click="signUp()" class="button">Sign Up</a>
+			<h4 id="logInStatus"></h4>
+		</div>
+	</div>
+</form>

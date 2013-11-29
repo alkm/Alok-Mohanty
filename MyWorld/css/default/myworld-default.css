@@ -1,0 +1,374 @@
+/*@import url('http://fonts.googleapis.com/css?family=Oswald');*/
+/*@import "compass/css3/box-shadow";*/
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  background-color: white; }
+  html * {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+body {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  background-color: white;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  font-family: sans-serif;
+  outline: 1px solid white;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: 100% 100%;
+  height: 100%;
+  margin: 0px 0px 0px 0px;
+  overflow: hidden;
+  padding: 0px 0px 0px 0px;
+  width: 100%; }
+  body #page-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%; }
+  body #header {
+    position: relative;
+    z-index: 100;
+    top: 0;
+    background-image: -o-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+    background-image: -moz-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.24, #63b8ff), color-stop(0.62, cornflowerblue));
+    background-image: -webkit-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+    background-image: -ms-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+    background-image: linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+    background-size: 100% 100%;
+    padding: 0px;
+    width: 100%;
+    height: 50px;
+    line-height: 20px;
+    border-radius: 1px;
+    text-align: end;
+    text-decoration: none; }
+    body #header #loginForm {
+      display: block;
+      position: absolute;
+      float: left;
+      padding-left: 10px; }
+      body #header #loginForm .formElements {
+        width: 100%;
+        height: 50px; }
+  body a {
+    text-decoration: none;
+    /* cursor: pointer;*/ }
+  body #footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%; }
+
+button, a.button {
+  /*background-image: url("../assets/btnBG/blank-button.png");*/
+  background: -webkit-linear-gradient(top, white 0%, rgba(10, 10, 10, 0.2) 50%, rgba(10, 10, 10, 0.2) 50%, rgba(0, 0, 0, 0) 0%);
+  /* Chrome10+,Safari5.1+ */
+  background: -moz-linear-gradient(top, white 0%, rgba(10, 10, 10, 0.2) 50%, rgba(10, 10, 10, 0.2) 50%, rgba(0, 0, 0, 0) 0%);
+  background-size: 100% 100%;
+  color: #FFFFFF;
+  text-shadow: 0 0 10px #fff;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #1874CD;
+  /*border: 1px solid yellow;*/ }
+  button:hover, a.button:hover {
+    opacity: 0.5;
+    text-shadow: 0 1px 0 #FEDD9B;
+    /* @include box-shadow(3px 3px 3px #4f4f4f);*/ }
+
+select {
+  -webkit-appearance: button;
+  -webkit-border-radius: 2px;
+  -webkit-padding-end: 20px;
+  -webkit-padding-start: 2px;
+  -webkit-user-select: none;
+  background-image: url(http://www.ericrasch.com/media/icon-selectbox.png), -webkit-linear-gradient(#fafafa, #f4f4f4 40%, #e5e5e5);
+  background-position: 97% center;
+  background-repeat: no-repeat;
+  border: 1px solid #AAA;
+  color: #555;
+  font-size: inherit;
+  margin: 0px;
+  overflow: hidden;
+  padding: 5px 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+input[type=checkbox] {
+  position: relative;
+  border: 1px solid #262626;
+  display: inline-block;
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+  width: 1em;
+  height: 1em;
+  vertical-align: text-top;
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1));
+  -webkit-appearance: none;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.4);
+  -webkit-border-radius: 3px; }
+  input[type=checkbox]:active {
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.2)); }
+  input[type=checkbox]:checked::after {
+    position: absolute;
+    content: '';
+    left: 15%;
+    top: -10%;
+    height: 40%;
+    width: 90%;
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+    -webkit-box-shadow: -1px 1px 0 rgba(0, 0, 0, 0.8);
+    -webkit-transform: rotate(-45deg); }
+
+.button {
+  border-radius: 2px;
+  width: 70px;
+  height: 20px;
+  line-height: 20px; }
+
+input[type=text], input[type=password] {
+  border: 2px solid white;
+  padding: 0px;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 0 0 10px 0;
+  width: 150px;
+  font-weight: bold;
+  border-radius: 2px;
+  text-shadow: 0 0 10px #0000FF;
+  color: #FFFFFF;
+  text-align: center;
+  text-decoration: none; }
+
+input[type=radio] {
+  margin: 0 0 10px 0;
+  width: 20px;
+  height: 20px;
+  color: #FFFFFF; }
+
+.radioLabel {
+  text-shadow: 0 0 10px #0000FF;
+  color: #FFFFFF; }
+
+label, a, a.button, p, input[type=text], input[type=password] {
+  font-size: 12px; }
+
+label, p, a, h3, h4 {
+  text-shadow: 0 0 12px #0000FF;
+  color: #FFFFFF;
+  font-weight: bold; }
+
+.registrationFormElements h4 {
+  text-align: center; }
+
+#poweredBy {
+  height: 25px; }
+
+#loginForm {
+  padding-top: 2px; }
+
+p {
+  text-shadow: 0 0 10px #0000FF;
+  color: #FFFFFF;
+  padding-right: 10px; }
+
+#footer {
+  bottom: 0;
+  background-image: -o-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+  background-image: -moz-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.24, #63b8ff), color-stop(0.62, cornflowerblue));
+  background-image: -webkit-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+  background-image: -ms-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+  background-image: linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+  background-size: 100% 100%;
+  background-color: #ADB3B8;
+  padding: 0px;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 1px;
+  color: #143718;
+  text-shadow: 0 0 10px #fff;
+  text-align: end;
+  text-decoration: none; }
+  #footer .fmnu {
+    text-align: center;
+    padding: 0;
+    margin: 0; }
+    #footer .fmnu ul {
+      padding: 0;
+      margin: 0;
+      line-height: 5%; }
+    #footer .fmnu li {
+      display: inline; }
+    #footer .fmnu .pipeline {
+      border-right: 1px solid #FFFFFF; }
+    #footer .fmnu li a {
+      font-weight: bold;
+      padding: 0px 12px 0px 12px; }
+    #footer .fmnu li a:hover {
+      opacity: 0.5;
+      text-shadow: 0 1px 0 #FEDD9B; }
+
+#view {
+  height: 100%;
+  width: 100%; }
+
+.myHome {
+  height: 100%;
+  width: 100%; }
+  .myHome #chatContainer {
+    width: 25%;
+    height: 400px;
+    position: absolute;
+    overflow: hidden;
+    white-space: nowrap;
+    bottom: 50px;
+    right: 0px; }
+    .myHome #chatContainer .myChat {
+      bottom: 0px;
+      float: right;
+      height: 400px;
+      width: 300px;
+      border-left: 4px outset #6495ED;
+      border-top: 4px outset #6495ED; }
+      .myHome #chatContainer .myChat .chatFooter {
+        height: 30px;
+        width: 300px;
+        bottom: 0px;
+        position: absolute;
+        color: #FF0000;
+        border: 2px outset #6495ED; }
+        .myHome #chatContainer .myChat .chatFooter .searchFriend {
+          width: 260px;
+          height: 30px;
+          color: #000000;
+          border-bottom-color: #FFFFFF;
+          position: absolute;
+          right: 5px; }
+      .myHome #chatContainer .myChat .chatList {
+        height: 330px;
+        width: 300px;
+        background-color: white;
+        position: absolute;
+        overflow-y: scroll;
+        overflow-x: hidden; }
+        .myHome #chatContainer .myChat .chatList .chatItem {
+          /*border: 2px outset #6495ED ;*/
+          /* padding-top: 1px;
+           margin-bottom: 4px;*/
+          height: 35px;
+          width: 100%;
+          display: inline-blobk; }
+          .myHome #chatContainer .myChat .chatList .chatItem .buddyImage {
+            height: 30px;
+            width: 30px;
+            float: left; }
+          .myHome #chatContainer .myChat .chatList .chatItem .componentLabel {
+            color: #000000;
+            line-height: 35px; }
+          .myHome #chatContainer .myChat .chatList .chatItem:hover {
+            background: rgba(100, 149, 237, 0.8); }
+            .myHome #chatContainer .myChat .chatList .chatItem:hover .componentLabel {
+              color: #FFFFFF; }
+    .myHome #chatContainer .chatHeader {
+      height: 30px;
+      width: 300px;
+      background-image: -o-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+      background-image: -moz-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+      background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.24, #63b8ff), color-stop(0.62, cornflowerblue));
+      background-image: -webkit-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+      background-image: -ms-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+      background-image: linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%); }
+  .myHome #chatParentWindow {
+    float: left;
+    width: 75%%;
+    height: 212px;
+    display: block;
+    bottom: 50px;
+    position: absolute;
+    overflow-y: scroll;
+    overflow-x: hidden; }
+    .myHome #chatParentWindow #chatWindowContainer .myChatWindow {
+      float: right;
+      width: 300px;
+      height: 200px;
+      border: 2px outset #6495ED;
+      margin: 5px 5px; }
+      .myHome #chatParentWindow #chatWindowContainer .myChatWindow .chatHeader {
+        height: 30px;
+        width: 300px;
+        background-image: -o-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+        background-image: -moz-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+        background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.24, #63b8ff), color-stop(0.62, cornflowerblue));
+        background-image: -webkit-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+        background-image: -ms-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+        background-image: linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%); }
+        .myHome #chatParentWindow #chatWindowContainer .myChatWindow .chatHeader p {
+          float: left; }
+        .myHome #chatParentWindow #chatWindowContainer .myChatWindow .chatHeader h3 {
+          float: right; }
+          .myHome #chatParentWindow #chatWindowContainer .myChatWindow .chatHeader h3:hover {
+            opacity: 0.5; }
+      .myHome #chatParentWindow #chatWindowContainer .myChatWindow .chatInput {
+        height: 30px;
+        width: 298px;
+        margin: 140px 0px;
+        bottom: 0px;
+        color: #FF0000;
+        border-top: 2px outset #6495ED; }
+        .myHome #chatParentWindow #chatWindowContainer .myChatWindow .chatInput .chatMsg {
+          height: 30px;
+          width: 250px;
+          color: #000000;
+          border: none;
+          outline: none; }
+      .myHome #chatParentWindow #chatWindowContainer .myChatWindow .chatData {
+        background-color: white;
+        height: 133px;
+        width: 298px;
+        position: absolute;
+        overflow-x: hidden;
+        overflow-y: scroll; }
+        .myHome #chatParentWindow #chatWindowContainer .myChatWindow .chatData .chatItem {
+          height: 35px;
+          width: 100%;
+          display: inline-blobk; }
+          .myHome #chatParentWindow #chatWindowContainer .myChatWindow .chatData .chatItem .buddyImage {
+            height: 30px;
+            width: 30px;
+            float: left; }
+          .myHome #chatParentWindow #chatWindowContainer .myChatWindow .chatData .chatItem .componentLabel {
+            color: #000000;
+            line-height: 35px; }
+
+::-webkit-scrollbar {
+  width: 12px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(100, 149, 237, 0.8);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); }
+  ::-webkit-scrollbar-thumb:hover {
+    opacity: 0.1; }
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(99, 184, 255, 0.4); }

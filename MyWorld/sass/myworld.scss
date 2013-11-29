@@ -1,0 +1,43 @@
+@import "variables/myworld-variables";
+@import "mixin/myworld-mixin";
+///////////////////////////////
+//Default app styles
+@import "default/myworld-default";
+
+// Settings specific to landscape
+body[data-orientation="landscape"] {
+  /*@media screen and (max-device-width: 1920px), screen and (max-device-height: 1080px)
+                and (orientation:landscape){ */
+  // Settings specific to widescreen
+  &[data-resolution="1920x1080"] {
+    @include setLayout(100%, 100%);
+    @import "partials/myworld-1920x1080";
+  }
+
+  // Settings specific to 1280x1024
+  &[data-resolution="1280x1024"] {
+    @include setLayout(1280px, 1024px);
+    @import "partials/myworld-1280x1024";
+  }
+
+  // Settings specific to 1024x768
+  &[data-resolution="1024x768"] {
+    @include setLayout(1024px, 768px);
+    @import "partials/myworld-1024x768";
+  }
+}
+
+// Settings specific to portrait
+body[data-orientation="portrait"] {
+  // Settings specific to 1080x1920
+  &[data-resolution="1080x1920"] {
+    @include setLayout(1080px, 1920px);
+    @import "partials/myworld-1080x1920";
+  }
+
+  &[data-resolution="768x1024"] {
+    @include setLayout(768px, 1024px);
+    @import "partials/myworld-768x1024";
+  }
+
+}

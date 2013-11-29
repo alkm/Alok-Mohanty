@@ -1,0 +1,386 @@
+@import "mixin/myworld-mixin";
+
+//setting view layout for 1080x1920 screen
+#view {
+}
+
+//Setting header properties for "1280x1024"
+#header {
+  height: 120px;
+  #languages {
+    top: 40px;
+    left: 60px;
+    width: auto;
+    .button {
+    }
+  }
+  .buttons {
+    @include buttons-topright(40px, 60px);
+    .button {
+    }
+  }
+}
+
+//setting footer properties for "1280x1024"
+#footer {
+  height: 120px;
+}
+
+//Setting footer properties for "1280x1024"
+a.button, a.small-button {
+  @include buttonProperties(16px, 5px, 130px, 24px, 24px, 8px);
+}
+
+//Setting grid buttons in home screen for "1280x1024"
+
+#homeScreenGrid {
+  //@include gridProperties(250px, 300px, 600px);
+  a {
+    &.button-text {
+
+    }
+  }
+
+  &.stacked {
+    margin-top: 100px;
+  }
+}
+
+.search-screen {
+  #view {
+    .right {
+      right: 0px;
+      width: 520px;
+    }
+  }
+}
+
+//Setting properties of popular search grid buttons
+#popularSearchGrid {
+  a.button {
+    @include buttonProperties(20px, 8px, 250px, 24px, 24px, 8px);
+    width: 215px;
+    height: 24px;
+    line-height: 24px;
+    margin: 8px 10px;
+    display: inline-block;
+  }
+}
+
+.property-screen {
+  #view {
+    @include setLayout(1080px, 1920px);
+
+    #contact-form {
+      form {
+        top: 100px;
+        left: 200px;
+      }
+    }
+
+    #propertyButtons.buttons {
+      height: inherit;
+      width: 400px;
+
+      margin: 0;
+      position: absolute;
+      top: 750px;
+      left: 50px;
+      padding: 0;
+
+      .button {
+        @include gridBtnProperties(30px, 60px, 10px, 400px, 20px, 10px);
+
+        margin: 15px;
+        margin-left: 10px;
+        line-height: 2.1em;
+        width: 100%;
+        height: 50px;
+        font-size: 1.6em;
+      }
+    }
+
+    .panel {
+
+      #propertyGallery {
+        @include setLayout(970px, 650px);
+
+        .propertyGalleryItem {
+          display: inline-block;
+          text-align: center;
+          width: 250px;
+
+          .propertyImg {
+            max-height: 145px;
+          }
+        }
+
+      }
+
+      .gallery img {
+      }
+
+      .photo > img, .map > .MicrosoftMap:first-child {
+      }
+    }
+
+    #propertyGrid {
+      top: 1170px;
+      left: 40px;
+    }
+
+    #propertyScreenPanel {
+      @include setLayout(970px, 650px);
+      position: absolute;
+      top: 50px;
+      #propertyPhoto {
+        img {
+          @include setLayout(970px, 650px);
+        }
+      }
+    }
+
+    #propertyButtons.buttons {
+      .button {
+      }
+      .email-button {
+      }
+    }
+
+    .description {
+      height: 320px;
+      width: 430px;
+      top: 750px;
+    }
+    .grid {
+      a {
+      }
+      a * {
+      }
+      a img {
+      }
+    }
+  }
+}
+
+.saved_searches-screen {
+  #view {
+    //Setting button properties in saved search screen
+    #savedSearch {
+      //setting saved search gfrid Style
+      @include setSavedSearchGrid(250px, 80px, 1000px);
+      a.button {
+        @include buttonProperties(20px, 5px, 350px, 35px, 35px, 12px);
+
+        font-size: 30px;
+        width: 400px;
+        height: 60px;
+        line-height: 60px;
+        margin: 20px;
+      }
+    }
+  }
+}
+
+//Search result grid style
+///////////////////////////////
+#searchResultGrid, #featuredGrid, #galleryGrid {
+  @include searchResultGridStyle(950px, 200px, 40px, 1000px);
+  a {
+    @include searchResultIconStyle(220px, 20px);
+    img {
+      @include searchResultIconImageStyle(110px, 15px);
+    }
+  }
+  a * {
+    @include searchResultStarIconStyle(14px, 135px);
+  }
+  .navbtn {
+    margin-top: 450px;
+  }
+}
+
+#searchResultGrid, #featuredGrid {
+  #prevBtn, #prevFeaturedBtn {
+    margin-left: -40px;
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-right: 50px solid white;
+    border-bottom: 25px solid transparent;
+  }
+  #nxtBtn, #nxtFeaturedBtn {
+    margin-left: 990px;
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-left: 50px solid white;
+    border-bottom: 25px solid transparent;
+  }
+}
+
+#refineSearchBtn {
+}
+
+//Setting property search form
+#propertySearchform {
+  .searchFormElements {
+    @include setLayout(600px, 40px);
+    line-height: 40px;
+    margin: 20px 0;
+    .componentLabel {
+      float: left;
+      width: 150px;
+    }
+  }
+  input[type="radio"] {
+  }
+  .links {
+    padding: 0px 200px;
+  }
+}
+
+//Setting radio button size
+input[type=radio] {
+  @include setRadioInput(5px, 25px, 25px, 25px);
+}
+
+.componentLabel, .calLabel {
+  @include setComponentLabel(20px, bold);
+}
+
+.calLabel {
+  width: 250px;
+}
+
+.radioLabel, .checkLabel {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0px 10px 0px 10px;
+}
+
+.checkLabel {
+
+  padding: 0px 10px 0px 10px;
+  float: left;
+}
+
+#page-wrapper.property-screen #view {
+  top: 175px;
+  position: absolute;
+}
+
+//Setting select box
+select {
+  @include setSelectBox(220px, 35px, 16px);
+}
+
+#rental_price, #rental_priceHigh, #priceMin, #priceMax {
+  @include setSelectBox(150px, 35px, 16px);
+  float: left;
+}
+
+//Setting Footer logo
+#footer {
+  height: 150px;
+  a {
+    @include seFooterLogo(0px, 370px);
+  }
+
+}
+
+#main-logo {
+  top: inherit;
+  bottom: 50px;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+
+  img {
+    max-width: 400px;
+  }
+}
+
+//Setting screen saver style
+#slideshow {
+  height: 650px;
+  width: 700px;
+  top: 600px;
+  left: 130px;
+  position: absolute;
+  overflow: hidden;
+
+  img {
+    width: 700px;
+    height: 650px;
+    position: relative;
+  }
+}
+
+.screensaver {
+  top: -10px;
+}
+
+.action {
+  height: 1930px;
+  margin-top: 0px;
+  p {
+    margin-top: 900px;
+  }
+}
+
+.request {
+  margin: 200px;
+  .right {
+    margin: 50px 120px;
+    form
+    div {
+      display: inline-block;
+      width: 550px;
+      padding-bottom: 10px;
+      label {
+        float: left;
+        width: 200px;
+      }
+      input[type='number'], input[type='text'] {
+        float: left;
+        width: 200px;
+        height: 30px;
+        font-size: 20px;
+        margin: 0 10px;
+      }
+      span {
+        float: left;
+        font-size: 20px;
+      }
+      button {
+        line-height: 10px;
+        margin: 20px 150px;
+      }
+      .row {
+        margin: 0px 150px;
+        label {
+          margin: 0 10px;
+        }
+        span {
+          font-size: 20px;
+        }
+      }
+
+    }
+  }
+}
+
+#galleryGrid {
+
+  .galleryItem {
+    width: 200px;
+
+    img {
+    }
+
+    span.caption {
+    }
+  }
+
+}

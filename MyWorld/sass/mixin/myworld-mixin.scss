@@ -1,0 +1,173 @@
+/*@import "compass/css3/box-shadow";*/
+
+@mixin disable-text-select {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+// Section for mixins
+@mixin setLayout($width, $height) {
+  width: $width;
+  height: $height;
+
+  #page-wrapper {
+    width: $width;
+    height: $height;
+  }
+}
+
+//Setting layout of the view
+@mixin setViewLayout($height, $margin-top, $margin-left, $width, $top) {
+  height: $height;
+  margin: $margin-top $margin-left 0;
+  width: $width;
+  top: $top;
+}
+
+//Creating top, right mixin to invoke for different resolutions.
+@mixin buttons-topright($top, $right) {
+  top: $top;
+  right: $right;
+}
+
+//Creating margin, padding mixin to invoke for different resolutions.
+@mixin button-marginpading($margin-right, $padding) {
+  margin-right: $margin-right;
+  padding: $padding;
+}
+
+//Setting button properties for different resolutions
+@mixin buttonProperties($font-Size, $padding, $width, $height, $line-height, $border-radius) {
+  font-size: $font-Size;
+  padding: $padding;
+  width: $width;
+  height: $height;
+  line-height: $line-height;
+  border-radius: $border-radius;
+}
+
+//Setting grid properties for different resolutions
+@mixin gridProperties($margin-top, $margin-left, $width) {
+  margin: $margin-top $margin-left;
+  width: $width;
+}
+
+//Setting the grid buttons properties in home screen
+@mixin gridBtnProperties($font-size, $height, $margin, $width, $bottom, $border-radius) {
+  &.button-text {
+    font-size: $font-size;
+    height: $height;
+    width: $width;
+    bottom: $bottom;
+    border-radius: $border-radius;
+  }
+  &.button-custom-image {
+    width: inherit;
+    height: inherit;
+  }
+  margin: $margin;
+}
+
+//Setting the grid buttons properties in home screen
+@mixin gridBtnProperties($font-size, $height, $margin, $width, $bottom, $border-radius) {
+  &.button-text {
+    font-size: $font-size;
+    height: $height;
+    width: $width;
+    bottom: $bottom;
+    border-radius: $border-radius;
+  }
+  &.button-custom-image {
+    width: inherit;
+    height: inherit;
+  }
+  margin: $margin;
+}
+
+@mixin rounded-box {
+}
+
+//Setting search result grid & icons styles
+
+@mixin searchResultGridStyle($height, $topMargin, $leftMargin, $width) {
+  height: $height;
+  margin: $topMargin $leftMargin 0;
+  width: $width;
+}
+
+//Setting search re3sult elements style
+@mixin searchResultIconStyle($height, $bottomMargin) {
+  height: $height;
+  margin-bottom: $bottomMargin;
+}
+
+@mixin searchResultStarIconStyle($fontSize, $width) {
+  font-size: $fontSize;
+  width: $width;
+}
+
+@mixin searchResultIconImageStyle($height, $margin) {
+  height: $height;
+  margin: $margin;
+}
+
+//Set Footer logo
+@mixin seFooterLogo($margin-top, $margin-left) {
+  margin: $margin-top $margin-left;
+}
+
+//Settng saved search screen grid style
+//Setting button properties in saved search screen
+@mixin setSavedSearchGrid($marginTop, $marginLeft, $width) {
+  margin: $marginTop $marginLeft 0;
+  width: $width;
+}
+
+//Setting left search panel
+@mixin setLeftSearchPanel($margin-left, $margin-top) {
+  margin: $margin-top $margin-left;
+
+}
+
+
+//Setting ad icon
+@mixin setAdIcon($margin-top, $margin-left) {
+  margin-top: $margin-top;
+  margin-left: $margin-left;
+}
+
+//Setting radio button size
+@mixin setRadioInput($border, $border-radius, $width, $height) {
+  border: $border black solid;
+  border-radius: $border-radius;
+  width: $width;
+  height: $height;
+}
+
+//Setting component label
+@mixin setComponentLabel($font-size, $font-weight) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+}
+
+//Set select box
+@mixin setSelectBox($width, $height, $font-size) {
+  width: $width;
+  height: $height;
+  font-size: $font-size;
+}
+
+@mixin propertyGrid {
+
+}
+
+@mixin standard-shadow {
+ /* @include box-shadow(5px 5px 5px #000);*/
+}
+
+@mixin image-shadow {
+ /* @include box-shadow(1px 1px 40px #000);*/
+}

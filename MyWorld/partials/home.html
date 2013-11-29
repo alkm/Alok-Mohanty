@@ -1,0 +1,72 @@
+<div class="homeHeader">
+    <!--<div class="mapHeader"><h4 class="screenTitle">Track your current location</h4></div>
+    <div class="singUpHeader"><h4 class="screenTitle">A free Sign Up and keep your world in it</h4></div>-->
+</div>
+<div id="mapContainer">
+    <!-- This is where Google map will go. --->
+</div>
+
+<div id="signUpForm">
+    <form id="userRegistrationForm">
+        <div class="registrationFormElements" >
+            <label class="componentLabel">First Name</label>
+            <input type="text" ng-model="firstName" value="firstName" id="fName">
+        </div>
+        <div class="registrationFormElements">
+            <label class="componentLabel">Last Name</label>
+            <input type="text" ng-model="lastName" id="lName">
+        </div>
+        <div class="registrationFormElements">
+            <label class="componentLabel">Gender</label>
+            <input type="radio" ng-model="gender" value="male" id="mal"><label class="radioLabel" for="male">Male</label>
+            <input type="radio" ng-model="gender" value="female" id="fmal"><label class="radioLabel" for="femal">Female</label>
+        </div>
+        <div class="registrationFormElements">
+            <label class="componentLabel">Email</label>
+            <input type="text" ng-model="email" value="email" id="emal">
+        </div>
+        <div class="registrationFormElements">
+            <label class="componentLabel">Password</label>
+            <input type="password" ng-model="password" value="password" id="pwd">
+        </div>
+        <div class="registrationFormElements">
+            <label class="componentLabel">Confirm Password</label>
+            <input type="password" ng-model="confirmPassword" value="confirmPassword" id="cpwd">
+        </div>
+        <div class="registrationFormElements">
+            <p>Click on Sign Up means you agree our terms</br> and data usage policy</p>
+            <div class="btnDiv">
+                <a class="button" ng-click="onSignUpClick()">Sign Up</a>
+                <a class="button" ng-click="resetSignUp()">Reset</a>
+            </div>
+        </div>
+        <div class="registrationFormElements">
+            <h4 id="signUpStatus"></h4>
+        </div>
+
+    </form>
+</div>
+<div id="simpleSlider">
+    <div id="slideshow" class="rs-slideshow">
+        <div class="slide-container">
+            <img src="images/morzine-2011-c.png" alt="The first image in a slideshow demo." title="This is the first slide" />
+            <span class="slide-caption">This is the first slide</span>
+        </div>
+        <ol class="slides">
+            <li>
+                <a href="images/morzine-2011-c.png"
+                   title="This is the first slide">This is the first slide</a>
+            </li>
+            <li>
+                <a href="images/morzine-2011-a.png"
+                   title="This is the second slide"
+                   data-link-to="http://reallysimpleworks.com">This is the second slide</a>
+            </li>
+            <li>
+                <a href="images/morzine-2011-b.png"
+                   title="This is the third slide">This is the third slide</a>
+            </li>
+        </ol>
+    </div>
+</div>
+

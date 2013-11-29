@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" ng-app="MyWorld">
+<head>
+    <meta charset="utf-8">
+    <title>MyWorld</title>
+    <link rel="stylesheet" href="css/myworld.css"/>
+    <link rel="stylesheet" href="slide/css/style.css" />
+</head>
+<body ng-controller="AppController" id="body" class="ng-cloak" data-orientation="landscape" data-resolution="1920x1080">
+     <!-- ng-style="{'background-image': 'url(\'' + screen_settings.background_image_url + '\')'}">-->
+<div id="page-wrapper">
+    <div id="header">
+        <form id="loginForm" ng-show="onIndexScreen()">
+            <div>
+                <div class="formElements" >
+                    <label class="componentLabel">Email</label>
+                    <input type="text" ng-model="loginEmail" key-enter="loginClick()" value="loginEmail" id="lEmail">
+                    <label class="componentLabel">Password</label>
+                    <input type="password" ng-model="loginPassword" key-enter="loginClick()" value="loginPassword" id="lPassword">
+                    <a class="button" ng-click="loginClick()">Log In</a>
+                    <a ng-click="signUp()" class="button">Sign Up</a>
+                    <h4 id="logInStatus"></h4>
+                </div>
+            </div>
+        </form>
+        <div>
+            <p id="poweredBy">Created By Alok</p>
+            <p class="welcomeUser" ng-model="welcomeUser" ng-show="!onIndexScreen()">Welcome {{welcomeUser}}</p>
+        </div>
+        <div id="menuBar">
+        </div>
+    </div>
+    <div ng-view id="view"></div>
+    <div id="footer">
+        <ul class="fmnu">
+            <li class="pipeline"><a href="#">About</a></li>
+            <li class="pipeline"><a href="#">Technology</a></li>
+            <li class="pipeline"><a href="#">Team</a></li>
+            <li class="pipeline"><a href="#">Contact</a></li>
+            <li class="pipeline"><a href="#">Terms of use</a></li>
+            <li><a href="#" id="privacy">Privacy Policy</a></li>
+        </ul>
+    </div>
+</div>
+
+ <script type="text/javascript">
+     (function() { // Begin scoping function
+         var roomID;
+         var itemID;		// Global to your code, invisible outside the scoping function
+     })();         // End scoping function
+ </script>
+
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular/angular-route.js"></script>
+<script src="lib/angular/angular-resource.js"></script>
+<script src="lib/angular/angular-sanitize.js"></script>
+<script src="lib/angular/angular-translate.js"></script>
+<script src="lib/jquery/jquery1.7.1.min.js"></script>
+
+<script src="js/translations.js"></script>
+<script src="js/routes.js"></script>
+<script src="js/services.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/directives.js"></script>
+<script src="js/jquery.rs.slideshow.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/offlinecontent/jstorage.js"></script>
+
+<script src="js/chat/chatcontrollers.js"></script>
+<script src="js/chat/chatwindow/chatwindowcontrollers.js"></script>
+<script src="js/chat/WebRTC/RTCMultiConnection.js"></script>
+<script src="js/chat/WebRTC/firebase.js"></script>
+<!--<script src="js/chat/WebRTC/data-connection.js"></script>-->
+<script src="js/chat/WebRTC/socket.io.js"></script>
+
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+</body>
+</html>

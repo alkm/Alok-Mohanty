@@ -1,0 +1,1400 @@
+/*@import "compass/css3/box-shadow";*/
+/*@import url('http://fonts.googleapis.com/css?family=Oswald');*/
+/*@import "compass/css3/box-shadow";*/
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  background-color: white; }
+  html * {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+body {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  background-color: white;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  font-family: sans-serif;
+  outline: 1px solid white;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: 100% 100%;
+  height: 100%;
+  margin: 0px 0px 0px 0px;
+  overflow: hidden;
+  padding: 0px 0px 0px 0px;
+  width: 100%; }
+  body #page-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%; }
+  body #header {
+    position: relative;
+    z-index: 100;
+    top: 0;
+    background-image: -o-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+    background-image: -moz-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.24, #63b8ff), color-stop(0.62, cornflowerblue));
+    background-image: -webkit-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+    background-image: -ms-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+    background-image: linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+    background-size: 100% 100%;
+    padding: 0px;
+    width: 100%;
+    height: 50px;
+    line-height: 20px;
+    border-radius: 1px;
+    text-align: end;
+    text-decoration: none; }
+    body #header #loginForm {
+      display: block;
+      position: absolute;
+      float: left;
+      padding-left: 10px; }
+      body #header #loginForm .formElements {
+        width: 100%;
+        height: 50px; }
+  body a {
+    text-decoration: none;
+    /* cursor: pointer;*/ }
+  body #footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%; }
+
+button, a.button {
+  /*background-image: url("../assets/btnBG/blank-button.png");*/
+  background: -webkit-linear-gradient(top, white 0%, rgba(10, 10, 10, 0.2) 50%, rgba(10, 10, 10, 0.2) 50%, rgba(0, 0, 0, 0) 0%);
+  /* Chrome10+,Safari5.1+ */
+  background: -moz-linear-gradient(top, white 0%, rgba(10, 10, 10, 0.2) 50%, rgba(10, 10, 10, 0.2) 50%, rgba(0, 0, 0, 0) 0%);
+  background-size: 100% 100%;
+  color: #FFFFFF;
+  text-shadow: 0 0 10px #fff;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #1874CD;
+  /*border: 1px solid yellow;*/ }
+  button:hover, a.button:hover {
+    opacity: 0.5;
+    text-shadow: 0 1px 0 #FEDD9B;
+    /* @include box-shadow(3px 3px 3px #4f4f4f);*/ }
+
+select {
+  -webkit-appearance: button;
+  -webkit-border-radius: 2px;
+  -webkit-padding-end: 20px;
+  -webkit-padding-start: 2px;
+  -webkit-user-select: none;
+  background-image: url(http://www.ericrasch.com/media/icon-selectbox.png), -webkit-linear-gradient(#fafafa, #f4f4f4 40%, #e5e5e5);
+  background-position: 97% center;
+  background-repeat: no-repeat;
+  border: 1px solid #AAA;
+  color: #555;
+  font-size: inherit;
+  margin: 0px;
+  overflow: hidden;
+  padding: 5px 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+input[type=checkbox] {
+  position: relative;
+  border: 1px solid #262626;
+  display: inline-block;
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+  width: 1em;
+  height: 1em;
+  vertical-align: text-top;
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1));
+  -webkit-appearance: none;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.4);
+  -webkit-border-radius: 3px; }
+  input[type=checkbox]:active {
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.2)); }
+  input[type=checkbox]:checked::after {
+    position: absolute;
+    content: '';
+    left: 15%;
+    top: -10%;
+    height: 40%;
+    width: 90%;
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+    -webkit-box-shadow: -1px 1px 0 rgba(0, 0, 0, 0.8);
+    -webkit-transform: rotate(-45deg); }
+
+.button {
+  border-radius: 2px;
+  width: 70px;
+  height: 20px;
+  line-height: 20px; }
+
+input[type=text], input[type=password] {
+  border: 2px solid white;
+  padding: 0px;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 0 0 10px 0;
+  width: 150px;
+  font-weight: bold;
+  border-radius: 2px;
+  text-shadow: 0 0 10px #0000FF;
+  color: #FFFFFF;
+  text-align: center;
+  text-decoration: none; }
+
+input[type=radio] {
+  margin: 0 0 10px 0;
+  width: 20px;
+  height: 20px;
+  color: #FFFFFF; }
+
+.radioLabel {
+  text-shadow: 0 0 10px #0000FF;
+  color: #FFFFFF; }
+
+label, a, a.button, p, input[type=text], input[type=password] {
+  font-size: 12px; }
+
+label, p, a, h3, h4 {
+  text-shadow: 0 0 12px #0000FF;
+  color: #FFFFFF;
+  font-weight: bold; }
+
+.registrationFormElements h4 {
+  text-align: center; }
+
+#poweredBy {
+  height: 25px; }
+
+#loginForm {
+  padding-top: 2px; }
+
+p {
+  text-shadow: 0 0 10px #0000FF;
+  color: #FFFFFF;
+  padding-right: 10px; }
+
+#footer {
+  bottom: 0;
+  background-image: -o-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+  background-image: -moz-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.24, #63b8ff), color-stop(0.62, cornflowerblue));
+  background-image: -webkit-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+  background-image: -ms-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+  background-image: linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+  background-size: 100% 100%;
+  background-color: #ADB3B8;
+  padding: 0px;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 1px;
+  color: #143718;
+  text-shadow: 0 0 10px #fff;
+  text-align: end;
+  text-decoration: none; }
+  #footer .fmnu {
+    text-align: center;
+    padding: 0;
+    margin: 0; }
+    #footer .fmnu ul {
+      padding: 0;
+      margin: 0;
+      line-height: 5%; }
+    #footer .fmnu li {
+      display: inline; }
+    #footer .fmnu .pipeline {
+      border-right: 1px solid #FFFFFF; }
+    #footer .fmnu li a {
+      font-weight: bold;
+      padding: 0px 12px 0px 12px; }
+    #footer .fmnu li a:hover {
+      opacity: 0.5;
+      text-shadow: 0 1px 0 #FEDD9B; }
+
+#view {
+  height: 100%;
+  width: 100%; }
+
+.myHome {
+  height: 100%;
+  width: 100%; }
+  .myHome #chatContainer {
+    width: 25%;
+    height: 400px;
+    position: absolute;
+    overflow: hidden;
+    white-space: nowrap;
+    bottom: 50px;
+    right: 0px; }
+    .myHome #chatContainer .myChat {
+      bottom: 0px;
+      float: right;
+      height: 400px;
+      width: 300px;
+      border-left: 4px outset #6495ED;
+      border-top: 4px outset #6495ED; }
+      .myHome #chatContainer .myChat .chatFooter {
+        height: 30px;
+        width: 300px;
+        bottom: 0px;
+        position: absolute;
+        color: #FF0000;
+        border: 2px outset #6495ED; }
+        .myHome #chatContainer .myChat .chatFooter .searchFriend {
+          width: 260px;
+          height: 30px;
+          color: #000000;
+          border-bottom-color: #FFFFFF;
+          position: absolute;
+          right: 5px; }
+      .myHome #chatContainer .myChat .chatList {
+        height: 330px;
+        width: 300px;
+        background-color: white;
+        position: absolute;
+        overflow-y: scroll;
+        overflow-x: hidden; }
+        .myHome #chatContainer .myChat .chatList .chatItem {
+          /*border: 2px outset #6495ED ;*/
+          /* padding-top: 1px;
+           margin-bottom: 4px;*/
+          height: 35px;
+          width: 100%;
+          display: inline-blobk; }
+          .myHome #chatContainer .myChat .chatList .chatItem .buddyImage {
+            height: 30px;
+            width: 30px;
+            float: left; }
+          .myHome #chatContainer .myChat .chatList .chatItem .componentLabel {
+            color: #000000;
+            line-height: 35px; }
+          .myHome #chatContainer .myChat .chatList .chatItem:hover {
+            background: rgba(100, 149, 237, 0.8); }
+            .myHome #chatContainer .myChat .chatList .chatItem:hover .componentLabel {
+              color: #FFFFFF; }
+    .myHome #chatContainer .chatHeader {
+      height: 30px;
+      width: 300px;
+      background-image: -o-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+      background-image: -moz-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+      background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.24, #63b8ff), color-stop(0.62, cornflowerblue));
+      background-image: -webkit-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+      background-image: -ms-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+      background-image: linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%); }
+  .myHome #chatParentWindow {
+    float: left;
+    width: 75%%;
+    height: 212px;
+    display: block;
+    bottom: 50px;
+    position: absolute;
+    overflow-y: scroll;
+    overflow-x: hidden; }
+    .myHome #chatParentWindow #chatWindowContainer .myChatWindow {
+      float: right;
+      width: 300px;
+      height: 200px;
+      border: 2px outset #6495ED;
+      margin: 5px 5px; }
+      .myHome #chatParentWindow #chatWindowContainer .myChatWindow .chatHeader {
+        height: 30px;
+        width: 300px;
+        background-image: -o-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+        background-image: -moz-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+        background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.24, #63b8ff), color-stop(0.62, cornflowerblue));
+        background-image: -webkit-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+        background-image: -ms-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+        background-image: linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%); }
+        .myHome #chatParentWindow #chatWindowContainer .myChatWindow .chatHeader p {
+          float: left; }
+        .myHome #chatParentWindow #chatWindowContainer .myChatWindow .chatHeader h3 {
+          float: right; }
+          .myHome #chatParentWindow #chatWindowContainer .myChatWindow .chatHeader h3:hover {
+            opacity: 0.5; }
+      .myHome #chatParentWindow #chatWindowContainer .myChatWindow .chatInput {
+        height: 30px;
+        width: 298px;
+        margin: 140px 0px;
+        bottom: 0px;
+        color: #FF0000;
+        border-top: 2px outset #6495ED; }
+        .myHome #chatParentWindow #chatWindowContainer .myChatWindow .chatInput .chatMsg {
+          height: 30px;
+          width: 250px;
+          color: #000000;
+          border: none;
+          outline: none; }
+      .myHome #chatParentWindow #chatWindowContainer .myChatWindow .chatData {
+        background-color: white;
+        height: 133px;
+        width: 298px;
+        position: absolute;
+        overflow-x: hidden;
+        overflow-y: scroll; }
+        .myHome #chatParentWindow #chatWindowContainer .myChatWindow .chatData .chatItem {
+          height: 35px;
+          width: 100%;
+          display: inline-blobk; }
+          .myHome #chatParentWindow #chatWindowContainer .myChatWindow .chatData .chatItem .buddyImage {
+            height: 30px;
+            width: 30px;
+            float: left; }
+          .myHome #chatParentWindow #chatWindowContainer .myChatWindow .chatData .chatItem .componentLabel {
+            color: #000000;
+            line-height: 35px; }
+
+::-webkit-scrollbar {
+  width: 12px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(100, 149, 237, 0.8);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); }
+  ::-webkit-scrollbar-thumb:hover {
+    opacity: 0.1; }
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(99, 184, 255, 0.4); }
+
+body[data-orientation="landscape"] {
+  /*@media screen and (max-device-width: 1920px), screen and (max-device-height: 1080px)
+                and (orientation:landscape){ */ }
+  body[data-orientation="landscape"][data-resolution="1920x1080"] {
+    width: 100%;
+    height: 100%;
+    /*@import "compass/css3/box-shadow";*/ }
+    body[data-orientation="landscape"][data-resolution="1920x1080"] #page-wrapper {
+      width: 100%;
+      height: 100%; }
+    body[data-orientation="landscape"][data-resolution="1920x1080"] .registrationFormElements .btnDiv {
+      text-align: center; }
+    body[data-orientation="landscape"][data-resolution="1920x1080"] .homeHeader {
+      width: 100%;
+      height: 10%;
+      line-height: 10%;
+      padding-top: 1%; }
+      body[data-orientation="landscape"][data-resolution="1920x1080"] .homeHeader .mapHeader {
+        width: 40%;
+        float: left;
+        padding-left: 5%; }
+        body[data-orientation="landscape"][data-resolution="1920x1080"] .homeHeader .mapHeader h3 {
+          text-align: center;
+          text-shadow: 0 0 10px #0000FF;
+          color: white; }
+      body[data-orientation="landscape"][data-resolution="1920x1080"] .homeHeader .singUpHeader {
+        width: 40%;
+        float: right;
+        padding-right: 5%; }
+        body[data-orientation="landscape"][data-resolution="1920x1080"] .homeHeader .singUpHeader h3 {
+          text-align: center;
+          text-shadow: 0 0 10px #0000FF;
+          color: white; }
+    body[data-orientation="landscape"][data-resolution="1920x1080"] #mapContainer {
+      left: 5%;
+      top: 10%;
+      height: 35%;
+      width: 43%;
+      position: absolute;
+      border: 7px outset white; }
+    body[data-orientation="landscape"][data-resolution="1920x1080"] #signUpForm {
+      top: 10%;
+      right: 5%;
+      height: 35%;
+      width: 43%;
+      position: absolute;
+      border: 7px outset white;
+      background-image: -o-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+      background-image: -moz-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+      background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.24, #63b8ff), color-stop(0.62, cornflowerblue));
+      background-image: -webkit-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+      background-image: -ms-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+      background-image: linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+      background-size: 100% 100%;
+      background-color: #ADB3B8; }
+      body[data-orientation="landscape"][data-resolution="1920x1080"] #signUpForm #userRegistrationForm {
+        padding-top: 2%; }
+        body[data-orientation="landscape"][data-resolution="1920x1080"] #signUpForm #userRegistrationForm .registrationFormElements .componentLabel {
+          float: left;
+          width: 48%;
+          color: #FFFFFF;
+          padding-left: 30px; }
+        body[data-orientation="landscape"][data-resolution="1920x1080"] #signUpForm #userRegistrationForm .registrationFormElements input[type=text], body[data-orientation="landscape"][data-resolution="1920x1080"] #signUpForm #userRegistrationForm .registrationFormElements input[type=password] {
+          width: 40%; }
+        body[data-orientation="landscape"][data-resolution="1920x1080"] #signUpForm #userRegistrationForm .registrationFormElements p {
+          text-align: center; }
+    body[data-orientation="landscape"][data-resolution="1920x1080"] #simpleSlider {
+      top: 48.7%;
+      left: 5%;
+      height: 40%;
+      width: 89.5%;
+      position: absolute;
+      border: 7px outset white; }
+  body[data-orientation="landscape"][data-resolution="1280x1024"] {
+    width: 1280px;
+    height: 1024px;
+    /*@import "compass/css3/box-shadow";*/
+    /*
+    @supports (display: flex) and (display: grid) {
+        // you know the drill
+    	#propertyDescriptions
+    	{
+    		height: 400px;
+    		width: 280px;
+    		margin: 0px -100px;
+    		padding: 25px;
+    		
+    	}
+    }
+    */
+    /*
+    @supports not (display: flex) {
+      // provide alternative layout
+      // with floats perhaps
+      #propertyDescriptions
+    	{
+    		height: 400px;
+    		width: 280px;
+    		margin: 0px 100px;
+    		padding: 25px;
+    		
+    	}
+    }
+    */ }
+    body[data-orientation="landscape"][data-resolution="1280x1024"] #page-wrapper {
+      width: 1280px;
+      height: 1024px; }
+    body[data-orientation="landscape"][data-resolution="1280x1024"] body {
+      width: 1280px;
+      height: 1024px; }
+    body[data-orientation="landscape"][data-resolution="1280x1024"] #page-wrapper {
+      width: 1280px;
+      height: 1024px; }
+    body[data-orientation="landscape"][data-resolution="1280x1024"] #view {
+      height: 600px;
+      margin: 15px 30px 0;
+      width: 1220px;
+      top: 0px; }
+    body[data-orientation="landscape"][data-resolution="1280x1024"] #header {
+      height: 120px; }
+      body[data-orientation="landscape"][data-resolution="1280x1024"] #header .buttons {
+        top: 40px;
+        right: 60px; }
+        body[data-orientation="landscape"][data-resolution="1280x1024"] #header .buttons .button {
+          margin-right: 20px;
+          padding: 10px; }
+    body[data-orientation="landscape"][data-resolution="1280x1024"] #footer {
+      height: 120px; }
+    body[data-orientation="landscape"][data-resolution="1280x1024"] a.button, body[data-orientation="landscape"][data-resolution="1280x1024"] a.small-button {
+      font-size: 12px;
+      padding: 5px;
+      width: 100px;
+      height: 16px;
+      line-height: 16px;
+      border-radius: 8px; }
+    body[data-orientation="landscape"][data-resolution="1280x1024"] #homeScreenGrid {
+      margin: 100px 350px;
+      width: 800px; }
+    body[data-orientation="landscape"][data-resolution="1280x1024"] #popularSearchGrid a.button {
+      font-size: 12px;
+      padding: 5px;
+      width: 180px;
+      height: 25px;
+      line-height: 25px;
+      border-radius: 8px; }
+    body[data-orientation="landscape"][data-resolution="1280x1024"] #propertyButtons.buttons {
+      height: 600px;
+      width: 450px;
+      margin: -30px -570px;
+      padding: 25px;
+      margin-left: 20px; }
+      body[data-orientation="landscape"][data-resolution="1280x1024"] #propertyButtons.buttons .button {
+        margin: 10px;
+        margin-left: 10px;
+        line-height: 58px; }
+        body[data-orientation="landscape"][data-resolution="1280x1024"] #propertyButtons.buttons .button.button-text {
+          font-size: 24px;
+          height: 55px;
+          width: 220px;
+          bottom: 20px;
+          border-radius: 10px; }
+        body[data-orientation="landscape"][data-resolution="1280x1024"] #propertyButtons.buttons .button.button-custom-image {
+          width: inherit;
+          height: inherit; }
+    body[data-orientation="landscape"][data-resolution="1280x1024"] #propertyScreenPanel {
+      width: 550px;
+      height: 450px; }
+      body[data-orientation="landscape"][data-resolution="1280x1024"] #propertyScreenPanel #page-wrapper {
+        width: 550px;
+        height: 450px; }
+      body[data-orientation="landscape"][data-resolution="1280x1024"] #propertyScreenPanel #propertyPhoto img {
+        width: 550px;
+        height: 450px; }
+        body[data-orientation="landscape"][data-resolution="1280x1024"] #propertyScreenPanel #propertyPhoto img #page-wrapper {
+          width: 550px;
+          height: 450px; }
+    body[data-orientation="landscape"][data-resolution="1280x1024"] #propertyGallery {
+      width: 650px;
+      height: 450px; }
+      body[data-orientation="landscape"][data-resolution="1280x1024"] #propertyGallery #page-wrapper {
+        width: 650px;
+        height: 450px; }
+      body[data-orientation="landscape"][data-resolution="1280x1024"] #propertyGallery .propertyImg {
+        max-height: 120px;
+        max-width: 140px;
+        margin: 5px 5px; }
+    body[data-orientation="landscape"][data-resolution="1280x1024"] #map div {
+      width: 550px;
+      height: 450px; }
+      body[data-orientation="landscape"][data-resolution="1280x1024"] #map div #page-wrapper {
+        width: 550px;
+        height: 450px; }
+    @supports (display: -webkit-flex) or (display: -moz-flex) or (display: flex) {
+      body[data-orientation="landscape"][data-resolution="1280x1024"] #propertyDescriptions {
+        /*display: -webkit-flex;
+        display: -moz-flex;
+        display: flex;*/
+        height: 400px;
+        width: 280px;
+        margin: 0px 350px;
+        padding: 25px; } }
+    @supports (display: grid) {
+      body[data-orientation="landscape"][data-resolution="1280x1024"] #propertyDescriptions {
+        height: 400px;
+        width: 280px;
+        margin: 0px 350px;
+        padding: 25px; }
+      body[data-orientation="landscape"][data-resolution="1280x1024"] #propertyGrid {
+        margin: 150px -500px;
+        width: 1600px;
+        height: 300px; }
+        body[data-orientation="landscape"][data-resolution="1280x1024"] #propertyGrid #page-wrapper {
+          width: 1600px;
+          height: 300px; } }
+    body[data-orientation="landscape"][data-resolution="1280x1024"] #savedSearch {
+      margin: 200px 250px 0;
+      width: 1000px; }
+      body[data-orientation="landscape"][data-resolution="1280x1024"] #savedSearch a.button {
+        font-size: 20px;
+        padding: 5px;
+        width: 350px;
+        height: 35px;
+        line-height: 35px;
+        border-radius: 12px; }
+    body[data-orientation="landscape"][data-resolution="1280x1024"] #searchResultGrid {
+      height: 550px;
+      margin: 200px 40px 0;
+      width: 1200px; }
+      body[data-orientation="landscape"][data-resolution="1280x1024"] #searchResultGrid a {
+        height: 260px;
+        margin-bottom: 20px; }
+        body[data-orientation="landscape"][data-resolution="1280x1024"] #searchResultGrid a img {
+          height: 150px;
+          margin: 15px; }
+      body[data-orientation="landscape"][data-resolution="1280x1024"] #searchResultGrid a * {
+        font-size: 14px;
+        width: 170px; }
+    body[data-orientation="landscape"][data-resolution="1280x1024"] #propertySearchform .searchFormElements {
+      width: 400px;
+      height: 40px;
+      line-height: 40px; }
+      body[data-orientation="landscape"][data-resolution="1280x1024"] #propertySearchform .searchFormElements #page-wrapper {
+        width: 400px;
+        height: 40px; }
+    body[data-orientation="landscape"][data-resolution="1280x1024"] #propertySearchform input[type="radio"] {
+      /*@include setLayout(30px, 30px);*/ }
+    body[data-orientation="landscape"][data-resolution="1280x1024"] #propertySearchform .links {
+      margin-top: 10px; }
+    body[data-orientation="landscape"][data-resolution="1280x1024"] input[type=radio] {
+      border: 5px black solid;
+      border-radius: 25px;
+      width: 25px;
+      height: 25px; }
+    body[data-orientation="landscape"][data-resolution="1280x1024"] .componentLabel {
+      font-size: 20px;
+      font-weight: bold; }
+    body[data-orientation="landscape"][data-resolution="1280x1024"] select {
+      width: 150px;
+      height: 30px;
+      font-size: 16px; }
+    body[data-orientation="landscape"][data-resolution="1280x1024"] #footer {
+      height: 150px; }
+      body[data-orientation="landscape"][data-resolution="1280x1024"] #footer a {
+        margin: 0px 370px; }
+    body[data-orientation="landscape"][data-resolution="1280x1024"] .slideshow {
+      list-style: none;
+      position: relative;
+      margin: 520px 210px; }
+    body[data-orientation="landscape"][data-resolution="1280x1024"] ul.slideshow li {
+      width: 500px;
+      height: 500px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      display: inline; }
+  body[data-orientation="landscape"][data-resolution="1024x768"] {
+    width: 1024px;
+    height: 768px;
+    /*@import "compass/css3/box-shadow";*/
+    /*
+    @supports (display: flex) and (display: grid) {
+        // you know the drill
+    	#propertyDescriptions
+    	{
+    		height: 350px;
+    		width: 250px;
+    		margin: -590px 800px;
+    		padding: 25px;
+    		
+    	}
+    }
+    */
+    /*
+    @supports not (display: flex) {
+      // provide alternative layout
+      // with floats perhaps
+      #propertyDescriptions
+    	{
+    		height: 350px;
+    		width: 250px;
+    		margin: -590px 800px;
+    		padding: 25px;
+    		
+    	}
+    }
+    */ }
+    body[data-orientation="landscape"][data-resolution="1024x768"] #page-wrapper {
+      width: 1024px;
+      height: 768px; }
+    body[data-orientation="landscape"][data-resolution="1024x768"] #view {
+      height: 600px;
+      margin: 15px -110px 0;
+      width: 1900px;
+      top: 0px; }
+      body[data-orientation="landscape"][data-resolution="1024x768"] #view .right {
+        width: 48%; }
+        body[data-orientation="landscape"][data-resolution="1024x768"] #view .right h2 {
+          text-align: center; }
+      body[data-orientation="landscape"][data-resolution="1024x768"] #view .foot {
+        bottom: 15px; }
+    body[data-orientation="landscape"][data-resolution="1024x768"] #header {
+      height: 120px; }
+      body[data-orientation="landscape"][data-resolution="1024x768"] #header .buttons {
+        top: 40px;
+        right: 60px; }
+        body[data-orientation="landscape"][data-resolution="1024x768"] #header .buttons .button {
+          margin-right: 20px;
+          padding: 10px; }
+    body[data-orientation="landscape"][data-resolution="1024x768"] #footer {
+      height: 120px; }
+    body[data-orientation="landscape"][data-resolution="1024x768"] a.button, body[data-orientation="landscape"][data-resolution="1024x768"] a.small-button {
+      font-size: 12px;
+      padding: 5px;
+      width: 100px;
+      height: 16px;
+      line-height: 16px;
+      border-radius: 8px; }
+    body[data-orientation="landscape"][data-resolution="1024x768"] #homeScreenGrid {
+      margin: 100px 350px;
+      width: 800px; }
+      body[data-orientation="landscape"][data-resolution="1024x768"] #homeScreenGrid a {
+        margin: 30px; }
+        body[data-orientation="landscape"][data-resolution="1024x768"] #homeScreenGrid a.button-text {
+          font-size: 20px;
+          height: 100px;
+          width: 220px;
+          bottom: 20px;
+          border-radius: 20px; }
+        body[data-orientation="landscape"][data-resolution="1024x768"] #homeScreenGrid a.button-custom-image {
+          width: inherit;
+          height: inherit; }
+    body[data-orientation="landscape"][data-resolution="1024x768"] #popularSearchGrid a.button {
+      font-size: 12px;
+      padding: 5px;
+      width: 180px;
+      height: 25px;
+      line-height: 25px;
+      border-radius: 8px; }
+    body[data-orientation="landscape"][data-resolution="1024x768"] #propertyButtons.buttons {
+      height: 600px;
+      width: 350px;
+      margin: -30px 100px;
+      padding: 25px; }
+      body[data-orientation="landscape"][data-resolution="1024x768"] #propertyButtons.buttons .button {
+        margin: 10px;
+        margin-left: 10px;
+        line-height: 40px; }
+        body[data-orientation="landscape"][data-resolution="1024x768"] #propertyButtons.buttons .button.button-text {
+          font-size: 20px;
+          height: 40px;
+          width: 180px;
+          bottom: 20px;
+          border-radius: 10px; }
+        body[data-orientation="landscape"][data-resolution="1024x768"] #propertyButtons.buttons .button.button-custom-image {
+          width: inherit;
+          height: inherit; }
+    body[data-orientation="landscape"][data-resolution="1024x768"] #propertyScreenPanel {
+      width: 450px;
+      height: 350px; }
+      body[data-orientation="landscape"][data-resolution="1024x768"] #propertyScreenPanel #page-wrapper {
+        width: 450px;
+        height: 350px; }
+      body[data-orientation="landscape"][data-resolution="1024x768"] #propertyScreenPanel #propertyPhoto img {
+        margin-left: 120px;
+        width: 450px;
+        height: 350px; }
+        body[data-orientation="landscape"][data-resolution="1024x768"] #propertyScreenPanel #propertyPhoto img #page-wrapper {
+          width: 450px;
+          height: 350px; }
+    body[data-orientation="landscape"][data-resolution="1024x768"] #propertyGallery {
+      width: 450px;
+      height: 50px;
+      margin-left: 120px; }
+      body[data-orientation="landscape"][data-resolution="1024x768"] #propertyGallery #page-wrapper {
+        width: 450px;
+        height: 50px; }
+      body[data-orientation="landscape"][data-resolution="1024x768"] #propertyGallery .propertyImg {
+        max-height: 80px;
+        max-width: 100px;
+        margin: 5px 5px; }
+    body[data-orientation="landscape"][data-resolution="1024x768"] #map div {
+      width: 450px;
+      height: 350px;
+      margin-left: 120px; }
+      body[data-orientation="landscape"][data-resolution="1024x768"] #map div #page-wrapper {
+        width: 450px;
+        height: 350px; }
+    @supports (display: -webkit-flex) or (display: -moz-flex) or (display: flex) {
+      body[data-orientation="landscape"][data-resolution="1024x768"] #propertyDescriptions {
+        /*display: -webkit-flex;
+        display: -moz-flex;
+        display: flex;*/
+        height: 350px;
+        width: 250px;
+        margin: -590px 800px;
+        padding: 25px; }
+      body[data-orientation="landscape"][data-resolution="1024x768"] #propertyGrid {
+        margin: -200px 150px;
+        width: 1600px;
+        height: 300px; }
+        body[data-orientation="landscape"][data-resolution="1024x768"] #propertyGrid #page-wrapper {
+          width: 1600px;
+          height: 300px; }
+        body[data-orientation="landscape"][data-resolution="1024x768"] #propertyGrid img {
+          height: 100px; }
+        body[data-orientation="landscape"][data-resolution="1024x768"] #propertyGrid a * {
+          width: 120px;
+          font-size: 16px; } }
+    @supports (display: grid) {
+      body[data-orientation="landscape"][data-resolution="1024x768"] #propertyDescriptions {
+        height: 350px;
+        width: 250px;
+        margin: -590px 800px;
+        padding: 25px; }
+      body[data-orientation="landscape"][data-resolution="1024x768"] #propertyGrid {
+        margin: -200px 150px;
+        width: 1600px;
+        height: 300px; }
+        body[data-orientation="landscape"][data-resolution="1024x768"] #propertyGrid #page-wrapper {
+          width: 1600px;
+          height: 300px; }
+        body[data-orientation="landscape"][data-resolution="1024x768"] #propertyGrid img {
+          height: 100px; }
+        body[data-orientation="landscape"][data-resolution="1024x768"] #propertyGrid a * {
+          width: 120px;
+          font-size: 16px; } }
+    body[data-orientation="landscape"][data-resolution="1024x768"] #savedSearch {
+      margin: 0px 250px 0;
+      width: 1000px; }
+      body[data-orientation="landscape"][data-resolution="1024x768"] #savedSearch a.button {
+        font-size: 20px;
+        padding: 5px;
+        width: 350px;
+        height: 35px;
+        line-height: 35px;
+        border-radius: 12px; }
+    body[data-orientation="landscape"][data-resolution="1024x768"] #searchResultGrid {
+      height: 450px;
+      margin: 200px 140px 0;
+      width: 1000px; }
+      body[data-orientation="landscape"][data-resolution="1024x768"] #searchResultGrid a {
+        height: 260px;
+        margin-bottom: -40px; }
+        body[data-orientation="landscape"][data-resolution="1024x768"] #searchResultGrid a img {
+          height: 110px;
+          margin: 15px; }
+      body[data-orientation="landscape"][data-resolution="1024x768"] #searchResultGrid a * {
+        font-size: 14px;
+        width: 130px; }
+    body[data-orientation="landscape"][data-resolution="1024x768"] #propertySearchform .searchFormElements {
+      width: 400px;
+      height: 40px;
+      line-height: 40px; }
+      body[data-orientation="landscape"][data-resolution="1024x768"] #propertySearchform .searchFormElements #page-wrapper {
+        width: 400px;
+        height: 40px; }
+    body[data-orientation="landscape"][data-resolution="1024x768"] #propertySearchform input[type="radio"] {
+      /*@include setLayout(30px, 30px);*/ }
+    body[data-orientation="landscape"][data-resolution="1024x768"] #propertySearchform .links {
+      margin-top: 10px; }
+    body[data-orientation="landscape"][data-resolution="1024x768"] input[type=radio] {
+      border: 5px black solid;
+      border-radius: 25px;
+      width: 25px;
+      height: 25px; }
+    body[data-orientation="landscape"][data-resolution="1024x768"] .componentLabel {
+      font-size: 20px;
+      font-weight: bold; }
+    body[data-orientation="landscape"][data-resolution="1024x768"] select {
+      width: 150px;
+      height: 30px;
+      font-size: 16px; }
+    body[data-orientation="landscape"][data-resolution="1024x768"] #footer {
+      height: 150px; }
+      body[data-orientation="landscape"][data-resolution="1024x768"] #footer a {
+        margin: 0px 370px; }
+    body[data-orientation="landscape"][data-resolution="1024x768"] .slideshow {
+      list-style: none;
+      position: relative;
+      margin: 520px 210px; }
+    body[data-orientation="landscape"][data-resolution="1024x768"] ul.slideshow li {
+      width: 500px;
+      height: 500px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      display: inline; }
+
+body[data-orientation="portrait"][data-resolution="1080x1920"] {
+  width: 1080px;
+  height: 1920px;
+  /*@import "compass/css3/box-shadow";*/ }
+  body[data-orientation="portrait"][data-resolution="1080x1920"] #page-wrapper {
+    width: 1080px;
+    height: 1920px; }
+  body[data-orientation="portrait"][data-resolution="1080x1920"] #header {
+    height: 120px; }
+    body[data-orientation="portrait"][data-resolution="1080x1920"] #header #languages {
+      top: 40px;
+      left: 60px;
+      width: auto; }
+    body[data-orientation="portrait"][data-resolution="1080x1920"] #header .buttons {
+      top: 40px;
+      right: 60px; }
+  body[data-orientation="portrait"][data-resolution="1080x1920"] #footer {
+    height: 120px; }
+  body[data-orientation="portrait"][data-resolution="1080x1920"] a.button, body[data-orientation="portrait"][data-resolution="1080x1920"] a.small-button {
+    font-size: 16px;
+    padding: 5px;
+    width: 130px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 8px; }
+  body[data-orientation="portrait"][data-resolution="1080x1920"] #homeScreenGrid.stacked {
+    margin-top: 100px; }
+  body[data-orientation="portrait"][data-resolution="1080x1920"] .search-screen #view .right {
+    right: 0px;
+    width: 520px; }
+  body[data-orientation="portrait"][data-resolution="1080x1920"] #popularSearchGrid a.button {
+    font-size: 20px;
+    padding: 8px;
+    width: 250px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 8px;
+    width: 215px;
+    height: 24px;
+    line-height: 24px;
+    margin: 8px 10px;
+    display: inline-block; }
+  body[data-orientation="portrait"][data-resolution="1080x1920"] .property-screen #view {
+    width: 1080px;
+    height: 1920px; }
+    body[data-orientation="portrait"][data-resolution="1080x1920"] .property-screen #view #page-wrapper {
+      width: 1080px;
+      height: 1920px; }
+    body[data-orientation="portrait"][data-resolution="1080x1920"] .property-screen #view #contact-form form {
+      top: 100px;
+      left: 200px; }
+    body[data-orientation="portrait"][data-resolution="1080x1920"] .property-screen #view #propertyButtons.buttons {
+      height: inherit;
+      width: 400px;
+      margin: 0;
+      position: absolute;
+      top: 750px;
+      left: 50px;
+      padding: 0; }
+      body[data-orientation="portrait"][data-resolution="1080x1920"] .property-screen #view #propertyButtons.buttons .button {
+        margin: 10px;
+        margin: 15px;
+        margin-left: 10px;
+        line-height: 2.1em;
+        width: 100%;
+        height: 50px;
+        font-size: 1.6em; }
+        body[data-orientation="portrait"][data-resolution="1080x1920"] .property-screen #view #propertyButtons.buttons .button.button-text {
+          font-size: 30px;
+          height: 60px;
+          width: 400px;
+          bottom: 20px;
+          border-radius: 10px; }
+        body[data-orientation="portrait"][data-resolution="1080x1920"] .property-screen #view #propertyButtons.buttons .button.button-custom-image {
+          width: inherit;
+          height: inherit; }
+    body[data-orientation="portrait"][data-resolution="1080x1920"] .property-screen #view .panel #propertyGallery {
+      width: 970px;
+      height: 650px; }
+      body[data-orientation="portrait"][data-resolution="1080x1920"] .property-screen #view .panel #propertyGallery #page-wrapper {
+        width: 970px;
+        height: 650px; }
+      body[data-orientation="portrait"][data-resolution="1080x1920"] .property-screen #view .panel #propertyGallery .propertyGalleryItem {
+        display: inline-block;
+        text-align: center;
+        width: 250px; }
+        body[data-orientation="portrait"][data-resolution="1080x1920"] .property-screen #view .panel #propertyGallery .propertyGalleryItem .propertyImg {
+          max-height: 145px; }
+    body[data-orientation="portrait"][data-resolution="1080x1920"] .property-screen #view #propertyGrid {
+      top: 1170px;
+      left: 40px; }
+    body[data-orientation="portrait"][data-resolution="1080x1920"] .property-screen #view #propertyScreenPanel {
+      width: 970px;
+      height: 650px;
+      position: absolute;
+      top: 50px; }
+      body[data-orientation="portrait"][data-resolution="1080x1920"] .property-screen #view #propertyScreenPanel #page-wrapper {
+        width: 970px;
+        height: 650px; }
+      body[data-orientation="portrait"][data-resolution="1080x1920"] .property-screen #view #propertyScreenPanel #propertyPhoto img {
+        width: 970px;
+        height: 650px; }
+        body[data-orientation="portrait"][data-resolution="1080x1920"] .property-screen #view #propertyScreenPanel #propertyPhoto img #page-wrapper {
+          width: 970px;
+          height: 650px; }
+    body[data-orientation="portrait"][data-resolution="1080x1920"] .property-screen #view .description {
+      height: 320px;
+      width: 430px;
+      top: 750px; }
+  body[data-orientation="portrait"][data-resolution="1080x1920"] .saved_searches-screen #view #savedSearch {
+    margin: 250px 80px 0;
+    width: 1000px; }
+    body[data-orientation="portrait"][data-resolution="1080x1920"] .saved_searches-screen #view #savedSearch a.button {
+      font-size: 20px;
+      padding: 5px;
+      width: 350px;
+      height: 35px;
+      line-height: 35px;
+      border-radius: 12px;
+      font-size: 30px;
+      width: 400px;
+      height: 60px;
+      line-height: 60px;
+      margin: 20px; }
+  body[data-orientation="portrait"][data-resolution="1080x1920"] #searchResultGrid, body[data-orientation="portrait"][data-resolution="1080x1920"] #featuredGrid, body[data-orientation="portrait"][data-resolution="1080x1920"] #galleryGrid {
+    height: 950px;
+    margin: 200px 40px 0;
+    width: 1000px; }
+    body[data-orientation="portrait"][data-resolution="1080x1920"] #searchResultGrid a, body[data-orientation="portrait"][data-resolution="1080x1920"] #featuredGrid a, body[data-orientation="portrait"][data-resolution="1080x1920"] #galleryGrid a {
+      height: 220px;
+      margin-bottom: 20px; }
+      body[data-orientation="portrait"][data-resolution="1080x1920"] #searchResultGrid a img, body[data-orientation="portrait"][data-resolution="1080x1920"] #featuredGrid a img, body[data-orientation="portrait"][data-resolution="1080x1920"] #galleryGrid a img {
+        height: 110px;
+        margin: 15px; }
+    body[data-orientation="portrait"][data-resolution="1080x1920"] #searchResultGrid a *, body[data-orientation="portrait"][data-resolution="1080x1920"] #featuredGrid a *, body[data-orientation="portrait"][data-resolution="1080x1920"] #galleryGrid a * {
+      font-size: 14px;
+      width: 135px; }
+    body[data-orientation="portrait"][data-resolution="1080x1920"] #searchResultGrid .navbtn, body[data-orientation="portrait"][data-resolution="1080x1920"] #featuredGrid .navbtn, body[data-orientation="portrait"][data-resolution="1080x1920"] #galleryGrid .navbtn {
+      margin-top: 450px; }
+  body[data-orientation="portrait"][data-resolution="1080x1920"] #searchResultGrid #prevBtn, body[data-orientation="portrait"][data-resolution="1080x1920"] #searchResultGrid #prevFeaturedBtn, body[data-orientation="portrait"][data-resolution="1080x1920"] #featuredGrid #prevBtn, body[data-orientation="portrait"][data-resolution="1080x1920"] #featuredGrid #prevFeaturedBtn {
+    margin-left: -40px;
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-right: 50px solid white;
+    border-bottom: 25px solid transparent; }
+  body[data-orientation="portrait"][data-resolution="1080x1920"] #searchResultGrid #nxtBtn, body[data-orientation="portrait"][data-resolution="1080x1920"] #searchResultGrid #nxtFeaturedBtn, body[data-orientation="portrait"][data-resolution="1080x1920"] #featuredGrid #nxtBtn, body[data-orientation="portrait"][data-resolution="1080x1920"] #featuredGrid #nxtFeaturedBtn {
+    margin-left: 990px;
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-left: 50px solid white;
+    border-bottom: 25px solid transparent; }
+  body[data-orientation="portrait"][data-resolution="1080x1920"] #propertySearchform .searchFormElements {
+    width: 600px;
+    height: 40px;
+    line-height: 40px;
+    margin: 20px 0; }
+    body[data-orientation="portrait"][data-resolution="1080x1920"] #propertySearchform .searchFormElements #page-wrapper {
+      width: 600px;
+      height: 40px; }
+    body[data-orientation="portrait"][data-resolution="1080x1920"] #propertySearchform .searchFormElements .componentLabel {
+      float: left;
+      width: 150px; }
+  body[data-orientation="portrait"][data-resolution="1080x1920"] #propertySearchform .links {
+    padding: 0px 200px; }
+  body[data-orientation="portrait"][data-resolution="1080x1920"] input[type=radio] {
+    border: 5px black solid;
+    border-radius: 25px;
+    width: 25px;
+    height: 25px; }
+  body[data-orientation="portrait"][data-resolution="1080x1920"] .componentLabel, body[data-orientation="portrait"][data-resolution="1080x1920"] .calLabel {
+    font-size: 20px;
+    font-weight: bold; }
+  body[data-orientation="portrait"][data-resolution="1080x1920"] .calLabel {
+    width: 250px; }
+  body[data-orientation="portrait"][data-resolution="1080x1920"] .radioLabel, body[data-orientation="portrait"][data-resolution="1080x1920"] .checkLabel {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0px 10px 0px 10px; }
+  body[data-orientation="portrait"][data-resolution="1080x1920"] .checkLabel {
+    padding: 0px 10px 0px 10px;
+    float: left; }
+  body[data-orientation="portrait"][data-resolution="1080x1920"] #page-wrapper.property-screen #view {
+    top: 175px;
+    position: absolute; }
+  body[data-orientation="portrait"][data-resolution="1080x1920"] select {
+    width: 220px;
+    height: 35px;
+    font-size: 16px; }
+  body[data-orientation="portrait"][data-resolution="1080x1920"] #rental_price, body[data-orientation="portrait"][data-resolution="1080x1920"] #rental_priceHigh, body[data-orientation="portrait"][data-resolution="1080x1920"] #priceMin, body[data-orientation="portrait"][data-resolution="1080x1920"] #priceMax {
+    width: 150px;
+    height: 35px;
+    font-size: 16px;
+    float: left; }
+  body[data-orientation="portrait"][data-resolution="1080x1920"] #footer {
+    height: 150px; }
+    body[data-orientation="portrait"][data-resolution="1080x1920"] #footer a {
+      margin: 0px 370px; }
+  body[data-orientation="portrait"][data-resolution="1080x1920"] #main-logo {
+    top: inherit;
+    bottom: 50px;
+    left: 0px;
+    width: 100%;
+    text-align: center; }
+    body[data-orientation="portrait"][data-resolution="1080x1920"] #main-logo img {
+      max-width: 400px; }
+  body[data-orientation="portrait"][data-resolution="1080x1920"] #slideshow {
+    height: 650px;
+    width: 700px;
+    top: 600px;
+    left: 130px;
+    position: absolute;
+    overflow: hidden; }
+    body[data-orientation="portrait"][data-resolution="1080x1920"] #slideshow img {
+      width: 700px;
+      height: 650px;
+      position: relative; }
+  body[data-orientation="portrait"][data-resolution="1080x1920"] .screensaver {
+    top: -10px; }
+  body[data-orientation="portrait"][data-resolution="1080x1920"] .action {
+    height: 1930px;
+    margin-top: 0px; }
+    body[data-orientation="portrait"][data-resolution="1080x1920"] .action p {
+      margin-top: 900px; }
+  body[data-orientation="portrait"][data-resolution="1080x1920"] .request {
+    margin: 200px; }
+    body[data-orientation="portrait"][data-resolution="1080x1920"] .request .right {
+      margin: 50px 120px; }
+      body[data-orientation="portrait"][data-resolution="1080x1920"] .request .right form
+      div {
+        display: inline-block;
+        width: 550px;
+        padding-bottom: 10px; }
+        body[data-orientation="portrait"][data-resolution="1080x1920"] .request .right form
+        div label {
+          float: left;
+          width: 200px; }
+        body[data-orientation="portrait"][data-resolution="1080x1920"] .request .right form
+        div input[type='number'], body[data-orientation="portrait"][data-resolution="1080x1920"] .request .right form
+        div input[type='text'] {
+          float: left;
+          width: 200px;
+          height: 30px;
+          font-size: 20px;
+          margin: 0 10px; }
+        body[data-orientation="portrait"][data-resolution="1080x1920"] .request .right form
+        div span {
+          float: left;
+          font-size: 20px; }
+        body[data-orientation="portrait"][data-resolution="1080x1920"] .request .right form
+        div button {
+          line-height: 10px;
+          margin: 20px 150px; }
+        body[data-orientation="portrait"][data-resolution="1080x1920"] .request .right form
+        div .row {
+          margin: 0px 150px; }
+          body[data-orientation="portrait"][data-resolution="1080x1920"] .request .right form
+          div .row label {
+            margin: 0 10px; }
+          body[data-orientation="portrait"][data-resolution="1080x1920"] .request .right form
+          div .row span {
+            font-size: 20px; }
+  body[data-orientation="portrait"][data-resolution="1080x1920"] #galleryGrid .galleryItem {
+    width: 200px; }
+body[data-orientation="portrait"][data-resolution="768x1024"] {
+  width: 768px;
+  height: 1024px;
+  /*@import "compass/css3/box-shadow";*/
+  /*
+  @supports (display: flex) and (display: grid) {
+      // you know the drill
+  	#propertyDescriptions
+  	{
+  		height: 220px;
+  		width: 300px;
+  		margin: 0px -100px;
+  		padding: 25px;
+  		
+  	}
+  }
+  */
+  /*
+  @supports not (display: flex) {
+    // provide alternative layout
+    // with floats perhaps
+    #propertyDescriptions
+  	{
+  		height: 220px;
+  		width: 350px;
+  		margin: -575px 300px;
+  		padding: 25px;
+  		
+  	}
+  	#propertyGrid
+  	{
+  		margin: 150px -500px;
+  		@include setLayout(1600px, 300px);
+  		img
+  		{
+  			height: 80px;
+  			margin: 5px;
+  		}
+  		a *
+  		{
+  			width: 100px;
+  			font-size: 16px;
+  		}
+  	}
+  }
+  */ }
+  body[data-orientation="portrait"][data-resolution="768x1024"] #page-wrapper {
+    width: 768px;
+    height: 1024px; }
+  body[data-orientation="portrait"][data-resolution="768x1024"] body {
+    width: 1280px;
+    height: 1024px; }
+  body[data-orientation="portrait"][data-resolution="768x1024"] #view {
+    height: 600px;
+    margin: 15px 30px 0;
+    width: 700px;
+    top: 0px; }
+    body[data-orientation="portrait"][data-resolution="768x1024"] #view .foot {
+      bottom: 15px; }
+  body[data-orientation="portrait"][data-resolution="768x1024"] #header {
+    height: 120px; }
+    body[data-orientation="portrait"][data-resolution="768x1024"] #header .buttons {
+      top: 40px;
+      right: 60px; }
+      body[data-orientation="portrait"][data-resolution="768x1024"] #header .buttons .button {
+        margin-right: 20px;
+        padding: 10px; }
+  body[data-orientation="portrait"][data-resolution="768x1024"] #footer {
+    height: 120px; }
+  body[data-orientation="portrait"][data-resolution="768x1024"] a.button, body[data-orientation="portrait"][data-resolution="768x1024"] a.small-button {
+    font-size: 12px;
+    padding: 5px;
+    width: 100px;
+    height: 16px;
+    line-height: 16px;
+    border-radius: 8px; }
+  body[data-orientation="portrait"][data-resolution="768x1024"] #homeScreenGrid {
+    margin: 100px 80px;
+    width: 800px; }
+    body[data-orientation="portrait"][data-resolution="768x1024"] #homeScreenGrid a {
+      margin: 30px; }
+      body[data-orientation="portrait"][data-resolution="768x1024"] #homeScreenGrid a.button-text {
+        font-size: 20px;
+        height: 100px;
+        width: 220px;
+        bottom: 20px;
+        border-radius: 20px; }
+      body[data-orientation="portrait"][data-resolution="768x1024"] #homeScreenGrid a.button-custom-image {
+        width: inherit;
+        height: inherit; }
+  body[data-orientation="portrait"][data-resolution="768x1024"] #popularSearchGrid a.button {
+    font-size: 12px;
+    padding: 5px;
+    width: 180px;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 8px; }
+  body[data-orientation="portrait"][data-resolution="768x1024"] #propertyButtons.buttons {
+    height: 600px;
+    width: 450px;
+    margin: -20px 80px;
+    padding: 0px;
+    margin-left: 20px; }
+    body[data-orientation="portrait"][data-resolution="768x1024"] #propertyButtons.buttons .button {
+      margin: 5px;
+      margin-left: 10px;
+      line-height: 40px; }
+      body[data-orientation="portrait"][data-resolution="768x1024"] #propertyButtons.buttons .button.button-text {
+        font-size: 18px;
+        height: 40px;
+        width: 220px;
+        bottom: 20px;
+        border-radius: 10px; }
+      body[data-orientation="portrait"][data-resolution="768x1024"] #propertyButtons.buttons .button.button-custom-image {
+        width: inherit;
+        height: inherit; }
+  body[data-orientation="portrait"][data-resolution="768x1024"] #propertyScreenPanel {
+    width: 550px;
+    height: 450px; }
+    body[data-orientation="portrait"][data-resolution="768x1024"] #propertyScreenPanel #page-wrapper {
+      width: 550px;
+      height: 450px; }
+    body[data-orientation="portrait"][data-resolution="768x1024"] #propertyScreenPanel #propertyPhoto img {
+      width: 600px;
+      height: 400px;
+      margin-left: 40px; }
+      body[data-orientation="portrait"][data-resolution="768x1024"] #propertyScreenPanel #propertyPhoto img #page-wrapper {
+        width: 600px;
+        height: 400px; }
+  body[data-orientation="portrait"][data-resolution="768x1024"] #propertyGallery {
+    width: 600px;
+    height: 400px;
+    margin-left: 40px; }
+    body[data-orientation="portrait"][data-resolution="768x1024"] #propertyGallery #page-wrapper {
+      width: 600px;
+      height: 400px; }
+    body[data-orientation="portrait"][data-resolution="768x1024"] #propertyGallery .propertyImg {
+      max-height: 120px;
+      max-width: 140px;
+      margin: 5px 5px; }
+  body[data-orientation="portrait"][data-resolution="768x1024"] #map div {
+    width: 600px;
+    height: 400px;
+    margin-left: 40px; }
+    body[data-orientation="portrait"][data-resolution="768x1024"] #map div #page-wrapper {
+      width: 600px;
+      height: 400px; }
+  @supports (display: -webkit-flex) or (display: -moz-flex) or (display: flex) {
+    body[data-orientation="portrait"][data-resolution="768x1024"] #propertyDescriptions {
+      /*display: -webkit-flex;
+      display: -moz-flex;
+      display: flex;*/
+      height: 200px;
+      width: 350px;
+      margin: -575px 300px;
+      padding: 25px; }
+    body[data-orientation="portrait"][data-resolution="768x1024"] #propertyGrid {
+      margin: -320px 20px;
+      width: 1600px;
+      height: 300px; }
+      body[data-orientation="portrait"][data-resolution="768x1024"] #propertyGrid #page-wrapper {
+        width: 1600px;
+        height: 300px; }
+      body[data-orientation="portrait"][data-resolution="768x1024"] #propertyGrid img {
+        height: 80px;
+        margin: 5px; }
+      body[data-orientation="portrait"][data-resolution="768x1024"] #propertyGrid a * {
+        width: 100px;
+        font-size: 16px; } }
+  @supports (display: grid) {
+    body[data-orientation="portrait"][data-resolution="768x1024"] #propertyDescriptions {
+      height: 200px;
+      width: 350px;
+      margin: -575px 300px;
+      padding: 25px; }
+    body[data-orientation="portrait"][data-resolution="768x1024"] #propertyGrid {
+      margin: -320px 0px;
+      width: 1600px;
+      height: 300px; }
+      body[data-orientation="portrait"][data-resolution="768x1024"] #propertyGrid #page-wrapper {
+        width: 1600px;
+        height: 300px; }
+      body[data-orientation="portrait"][data-resolution="768x1024"] #propertyGrid img {
+        height: 80px;
+        margin: 5px; }
+      body[data-orientation="portrait"][data-resolution="768x1024"] #propertyGrid a * {
+        width: 100px;
+        font-size: 16px; } }
+  body[data-orientation="portrait"][data-resolution="768x1024"] #savedSearch {
+    margin: 0px 15px 0;
+    width: 1000px; }
+    body[data-orientation="portrait"][data-resolution="768x1024"] #savedSearch a.button {
+      font-size: 20px;
+      padding: 5px;
+      width: 300px;
+      height: 35px;
+      line-height: 35px;
+      border-radius: 12px; }
+  body[data-orientation="portrait"][data-resolution="768x1024"] #searchResultGrid {
+    height: 678px;
+    margin: 80px 20px 0;
+    width: 662px; }
+    body[data-orientation="portrait"][data-resolution="768x1024"] #searchResultGrid a {
+      height: 150px;
+      margin-bottom: 18px; }
+      body[data-orientation="portrait"][data-resolution="768x1024"] #searchResultGrid a img {
+        height: 80px;
+        margin: 5px; }
+    body[data-orientation="portrait"][data-resolution="768x1024"] #searchResultGrid a * {
+      font-size: 14px;
+      width: 100px; }
+  body[data-orientation="portrait"][data-resolution="768x1024"] #propertySearchform .searchFormElements {
+    width: 400px;
+    height: 40px;
+    line-height: 40px; }
+    body[data-orientation="portrait"][data-resolution="768x1024"] #propertySearchform .searchFormElements #page-wrapper {
+      width: 400px;
+      height: 40px; }
+  body[data-orientation="portrait"][data-resolution="768x1024"] #propertySearchform input[type="radio"] {
+    /*@include setLayout(30px, 30px);*/ }
+  body[data-orientation="portrait"][data-resolution="768x1024"] #propertySearchform .links {
+    margin-top: 10px; }
+  body[data-orientation="portrait"][data-resolution="768x1024"] #view .left {
+    margin: 0px -10%; }
+  body[data-orientation="portrait"][data-resolution="768x1024"] input[type=radio] {
+    border: 5px black solid;
+    border-radius: 25px;
+    width: 25px;
+    height: 25px; }
+  body[data-orientation="portrait"][data-resolution="768x1024"] .componentLabel {
+    font-size: 20px;
+    font-weight: bold; }
+  body[data-orientation="portrait"][data-resolution="768x1024"] select {
+    width: 150px;
+    height: 30px;
+    font-size: 16px; }
+  body[data-orientation="portrait"][data-resolution="768x1024"] #footer {
+    height: 150px; }
+    body[data-orientation="portrait"][data-resolution="768x1024"] #footer a {
+      margin: 0px 370px; }
+  body[data-orientation="portrait"][data-resolution="768x1024"] .slideshow {
+    list-style: none;
+    position: relative;
+    margin: 520px 210px; }
+  body[data-orientation="portrait"][data-resolution="768x1024"] ul.slideshow li {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: inline; }

@@ -1,0 +1,11 @@
+<div class="myChatWindow" ng-controller="ChatWindowController">
+    <div class="chatHeader">
+       <p class="welcomeUser">{{window}}</p>
+       <h3 ng-click="closeChatWindow(window)">x</h3>
+    </div>
+   <div class="chatData" id="{{'chatData'+window}}">
+   </div>
+    <div class="chatInput">
+        <input type="text" class="chatMsg" id="{{'chatMsg'+window}}" key-enter="sendMessage(window)"/>
+    </div>
+</div>

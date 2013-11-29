@@ -1,0 +1,155 @@
+{
+   "badge_color" : "#f8e405",
+   "agent_uid" : null,
+   "pool_desc" : null,
+   "entry_date" : null,
+   "zoning" : null,
+   "square_footage" : "5041",
+   "status_desc" : "Active",
+   "youtube_code" : null,
+   "original_listing_price" : null,
+   "conid" : "6",
+   "latitude" : null,
+   "property_type" : "Residential",
+   "badge_image_url" : null,
+   "longitude" : null,
+   "dom" : null,
+   "listing_date" : "1359100800",
+   "roof_desc" : "Tile",
+   "photo_url" : null,
+   "title" : "3 HIBISCUS DR",
+   "hoa_dues" : null,
+   "property_number" : "101",
+   "current_price" : "2650000",
+   "rental_price" : "2650000",
+   "pool_type_desc" : null,
+   "bathrooms_desc" : null,
+   "bedrooms_possible" : null,
+   "landscape_desc" : null,
+   "apn" : null,
+   "lot_size_sqft" : null,
+   "notice_of_default" : null,
+   "sale_or_rent" : "sale",
+   "heating_desc" : "Central",
+   "primary_photo" : {
+      "is_external" : false,
+      "fid" : "21928968",
+      "url" : "https://ws.realtsoft.biz/sites/default/files/drealty_image/6/41905980-1-normal.jpg",
+      "thumbnail_url" : "https://ws.realtsoft.biz/sites/default/files/drealty_image/6/41905980-1-normal.jpg"
+   },
+   "kitchen_appliances_desc" : null,
+   "property_desc_short" : "Stunning and Sophisticated Custom Residence built by Tim Towles on Charlotte Harbor with direct frontage overlooking Charlotte Harbor.  This colossal home was built with tremendous love and quality by the present owners that spared no expense in making the home magnificent in...",
+   "garage_desc" : null,
+   "bathrooms_full" : "4",
+   "stories_desc" : "",
+   "photo_fid" : null,
+   "state" : "Florida",
+   "hoa_payment_schedule_desc" : null,
+   "kitchen_desc" : null,
+   "id" : "76722",
+   "address" : "3 HIBISCUS DR",
+   "property_subtype_desc" : null,
+   "master_bath_desc" : null,
+   "bathrooms_half" : "1",
+   "selling_date" : null,
+   "master_bedroom_desc" : null,
+   "zip" : "33950",
+   "pending_date" : null,
+   "type" : null,
+   "selling_price" : null,
+   "mls_number" : "A3972329",
+   "photos" : [
+      {
+         "is_external" : false,
+         "fid" : "21928968",
+         "url" : "https://ws.realtsoft.biz/sites/default/files/drealty_image/6/41905980-1-normal.jpg",
+         "thumbnail_url" : "https://ws.realtsoft.biz/sites/default/files/drealty_image/6/41905980-1-normal.jpg"
+      },
+      {
+         "is_external" : false,
+         "fid" : "21928971",
+         "url" : "https://ws.realtsoft.biz/sites/default/files/drealty_image/6/41905980-2-normal.jpg",
+         "thumbnail_url" : "https://ws.realtsoft.biz/sites/default/files/drealty_image/6/41905980-2-normal.jpg"
+      },
+      {
+         "is_external" : false,
+         "fid" : "21928972",
+         "url" : "https://ws.realtsoft.biz/sites/default/files/drealty_image/6/41905980-3-normal.jpg",
+         "thumbnail_url" : "https://ws.realtsoft.biz/sites/default/files/drealty_image/6/41905980-3-normal.jpg"
+      },
+      {
+         "is_external" : false,
+         "fid" : "21928974",
+         "url" : "https://ws.realtsoft.biz/sites/default/files/drealty_image/6/41905980-4-normal.jpg",
+         "thumbnail_url" : "https://ws.realtsoft.biz/sites/default/files/drealty_image/6/41905980-4-normal.jpg"
+      },
+      {
+         "is_external" : false,
+         "fid" : "21928976",
+         "url" : "https://ws.realtsoft.biz/sites/default/files/drealty_image/6/41905980-5-normal.jpg",
+         "thumbnail_url" : "https://ws.realtsoft.biz/sites/default/files/drealty_image/6/41905980-5-normal.jpg"
+      },
+      {
+         "is_external" : false,
+         "fid" : "21928978",
+         "url" : "https://ws.realtsoft.biz/sites/default/files/drealty_image/6/41905980-6-normal.jpg",
+         "thumbnail_url" : "https://ws.realtsoft.biz/sites/default/files/drealty_image/6/41905980-6-normal.jpg"
+      },
+      {
+         "is_external" : false,
+         "fid" : "21928980",
+         "url" : "https://ws.realtsoft.biz/sites/default/files/drealty_image/6/41905980-7-normal.jpg",
+         "thumbnail_url" : "https://ws.realtsoft.biz/sites/default/files/drealty_image/6/41905980-7-normal.jpg"
+      },
+      {
+         "is_external" : false,
+         "fid" : "21928982",
+         "url" : "https://ws.realtsoft.biz/sites/default/files/drealty_image/6/41905980-8-normal.jpg",
+         "thumbnail_url" : "https://ws.realtsoft.biz/sites/default/files/drealty_image/6/41905980-8-normal.jpg"
+      },
+      {
+         "is_external" : false,
+         "fid" : "21928984",
+         "url" : "https://ws.realtsoft.biz/sites/default/files/drealty_image/6/41905980-9-normal.jpg",
+         "thumbnail_url" : "https://ws.realtsoft.biz/sites/default/files/drealty_image/6/41905980-9-normal.jpg"
+      },
+      {
+         "is_external" : false,
+         "fid" : "21928986",
+         "url" : "https://ws.realtsoft.biz/sites/default/files/drealty_image/6/41905980-10-normal.jpg",
+         "thumbnail_url" : "https://ws.realtsoft.biz/sites/default/files/drealty_image/6/41905980-10-normal.jpg"
+      },
+      {
+         "is_external" : false,
+         "fid" : "21928988",
+         "url" : "https://ws.realtsoft.biz/sites/default/files/drealty_image/6/41905980-11-normal.jpg",
+         "thumbnail_url" : "https://ws.realtsoft.biz/sites/default/files/drealty_image/6/41905980-11-normal.jpg"
+      },
+      {
+         "is_external" : false,
+         "fid" : "21928990",
+         "url" : "https://ws.realtsoft.biz/sites/default/files/drealty_image/6/41905980-12-normal.jpg",
+         "thumbnail_url" : "https://ws.realtsoft.biz/sites/default/files/drealty_image/6/41905980-12-normal.jpg"
+      }
+   ],
+   "reo_desc" : null,
+   "import_or_manual" : "import",
+   "price_per_sqft" : null,
+   "badge_label_color" : "#13279e",
+   "year_built" : "2004",
+   "youtube_code_raw" : null,
+   "city" : "PUNTA GORDA",
+   "badge" : null,
+   "property_desc" : "Stunning and Sophisticated Custom Residence built by Tim Towles on Charlotte Harbor with direct frontage overlooking Charlotte Harbor.  This colossal home was built with tremendous love and quality by the present owners that spared no expense in making the home magnificent in every way.  Some of the highlights include, corner waterfront parcel , private dock with lift, infinity pool, private saloon, and wrap-around  2nd floor balcony overlooking the living room and water -- Furniture negotiable",
+   "status_date" : null,
+   "listing_office" : "ALLISON JAMES ESTATES & HOMES",
+   "floor_coverings_desc" : null,
+   "office_nid" : "1760",
+   "listing_price" : "2650000",
+   "hoa_desc" : null,
+   "subdivision_name" : "Punta Gorda Isles",
+   "builder" : null,
+   "lot_size_acres" : "0",
+   "short_sale_desc" : null,
+   "bedrooms" : "4"
+}

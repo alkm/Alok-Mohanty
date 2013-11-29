@@ -1,0 +1,9 @@
+<div class="screensaver" ng-click="startOver()">
+    <div id="screenSaverBG"></div>
+    <div id="slideshow">
+        <img ng-repeat="image in screensaverImages" ng-src="{{image}}" err-src="/assets/images/transparent_default.png"/>
+    </div>
+    <div class="action">
+        <p>{{'TOUCH_HERE' | translate}}</p>
+    </div>
+</div>

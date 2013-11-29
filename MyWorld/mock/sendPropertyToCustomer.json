@@ -1,0 +1,6 @@
+{
+   "sms_response_message" : "SMS sent successfully",
+   "sms_response" : true,
+   "email_response" : true,
+   "email_response_message" : "Email sent successfully"
+}

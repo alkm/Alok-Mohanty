@@ -1,0 +1,55 @@
+<div class="request">
+    <h1 class="screenTitle" align="center">{{'REQUEST_MORE_INFORMATION' | translate}}</h1>
+
+    <div class="right">
+        <form>
+            <div>
+                <label class="componentLabel" for="price">{{'House Price' | translate}}</label>
+                <input type="number" id="price" ng-model="price" name="price">
+                <!--ng-attr-placeholder="{{'PRICE_OF_HOME' | translate}}">-->
+                <span class="componentLabel">dollars</span>
+            </div>
+            <div>
+                <label class="componentLabel" for="down-payment">{{'Down Payment' | translate}}</label>
+                <input type="number" id="down-payment" ng-model="down_payment" name="down_payment">
+                <!--ng-attr-placeholder="{{'DOWN_PAYMENT' | translate}}">-->
+                <span class="componentLabel">dollars</span>
+            </div>
+            <div>
+                <label class="componentLabel" for="annual-interest">{{'Annual Interest' | translate}}</label>
+                <input type="text" id="annual-interest" ng-model="annual_interest" name="annual_interest"
+                       ng-init="annual_interest = 2.9">
+                <!--ng-attr-placeholder="{{'ANNUAL_INTEREST' | translate}}" >-->
+                <span class="componentLabel">%</span>
+            </div>
+            <div>
+                <label class="componentLabel" for="mortgage-term">{{'Term' | translate}}</label>
+                <input type="number" id="mortgage-term" ng-model="mortgage_term" name="mortgage_term"
+                       ng-init="mortgage_term = 30">
+                <!--ng-attr-placeholder="{{'MORTGAGE_TERM' | translate}}" >--> <span class="componentLabel">{{'years' |
+                translate}}</span>
+            </div>
+            <div>
+                <button class="button" ng-click="calculate()">{{'CALCULATE' | translate}}</button>
+            </div>
+            <div class="calculations" ng-show="calculated == true">
+                <div class="row">
+                    <span class="componentLabel">{{'Mortgage Principal:' | translate}}</span>
+                    <label class="componentLabel">{{mortgage_principal}}</label>
+                </div>
+                <div class="row">
+                    <span class="componentLabel">{{'Number of Payments:' | translate}}</span>
+                    <label class="componentLabel">{{total_payments}}</label>
+                </div>
+                <div class="row">
+                    <span class="componentLabel">{{'Monthly Payment:' | translate}}</span>
+                    <label class="componentLabel">{{monthly_payment}}</label>
+                </div>
+            </div>
+            <div class="disclaimer">
+                {{'MORTGAGE_CALCULATOR_DISCLAIMER' | translate}}
+            </div>
+        </form>
+    </div>
+</div>
+

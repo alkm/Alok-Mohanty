@@ -1,0 +1,105 @@
+<div class="left">
+    <h1 class="screenTitle">Property Search</h1>
+
+    <form id="propertySearchform">
+        <div class="searchFormElements" id="propertyType" class="input-text"
+             ng-show="screen_settings.allow_sale_rent_filter">
+            <label class="componentLabel">{{'TYPE' | translate}}:</label>
+            <input type="radio" ng-model="saleOrRent" value="sale" id="sale"><label class="radioLabel" for="sale">{{'FOR_SALE'
+            | translate}}</label>
+            <input type="radio" ng-model="saleOrRent" value="rent" id="rent"><label class="radioLabel" for="rent">{{'FOR_RENT'
+            | translate}}</label>
+        </div>
+
+        <div class="searchFormElements" id="propertyCity" class="select" ng-show="screen_settings.allow_city_filter">
+            <label class="componentLabel" for="city">{{'CITY' | translate}}:</label>
+            <select id="city" ng-model="city">
+                <option value=""> SELECT CITY</option>
+                <option ng-repeat="city in screen_settings.allowed_cities" value="{{city}}">{{city}}</option>
+            </select>
+        </div>
+
+        <div class="searchFormElements" id="propertySubdivision" class="select"
+             ng-show="screen_settings.allow_subdivision_filter">
+            <label class="componentLabel" for="subdivision">{{'SUBDIVISION' | translate}}:</label>
+            <select id="subdivision" ng-model="subdivision">
+                <option value=""> SELECT SUBDIVISION</option>
+                <option ng-repeat="subdivision in screen_settings.allowed_subdivisions"
+                        value="{{subdivision}}">{{subdivision}}
+                </option>
+            </select>
+        </div>
+
+        <div class="searchFormElements" id="propertyBedrooms">
+            <label class="componentLabel">{{'BEDROOMS' | translate}}:</label>
+            <input type="radio" ng-model="bedrooms" id="bedroom1" value="1"><label class="radioLabel">1</label>
+            <input type="radio" ng-model="bedrooms" id="bedroom2" value="2"><label class="radioLabel">2</label>
+            <input type="radio" ng-model="bedrooms" id="bedroom3" value="3"><label class="radioLabel">3</label>
+            <input type="radio" ng-model="bedrooms" id="bedroom4" value="4"><label class="radioLabel">4</label>
+            <input type="radio" ng-model="bedrooms" id="bedroom5" value="5"><label class="radioLabel">5+</label>
+        </div>
+
+        <div class="searchFormElements" id="propertyBathrooms">
+            <label class="componentLabel">{{'BATHROOMS' | translate}}:</label>
+            <input type="radio" ng-model="bathroomsFull" id="bathroomsFull1" value="1"><label
+                class="radioLabel">1</label>
+            <input type="radio" ng-model="bathroomsFull" id="bathroomsFull2" value="2"><label
+                class="radioLabel">2</label>
+            <input type="radio" ng-model="bathroomsFull" id="bathroomsFull3" value="3"><label
+                class="radioLabel">3</label>
+            <input type="radio" ng-model="bathroomsFull" id="bathroomsFull4" value="4"><label
+                class="radioLabel">4+</label>
+        </div>
+
+        <div class="searchFormElements" id="propertyPrice"
+             ng-show="screen_settings.allow_price_filter && type != 'rent'">
+            <label class="componentLabel" for="price">{{'PRICE' | translate}}:</label>
+            <select id="priceMin" ng-model="priceLow">
+                <option value=""> Select...</option>
+                <option ng-repeat="price in screen_settings.price_range_option_keys"
+                        value="{{price}}">{{screen_settings.price_range_options[price]}}
+                </option>
+            </select>
+            <label class="checkLabel">to</label>
+            <select id="priceMax" ng-model="priceHigh">
+                <option value="">Select...</option>
+                <option ng-repeat="price in screen_settings.price_range_option_keys"
+                        ng-show="price * 1 > priceLow"
+                        value="{{price}}">{{screen_settings.price_range_options[price]}}
+                </option>
+            </select>
+        </div>
+
+        <div class="searchFormElements" ng-show="screen_settings.allow_price_filter && type == 'rent'">
+            <label class="componentLabel" for="rental_price">{{'RENTAL_PRICE' | translate}}:</label>
+            <select id="rental_price" ng-model="rentalPriceLow">
+                <option value=""> Select...</option>
+                <option ng-repeat="price in screen_settings.rental_price_range_option_keys"
+                        value="{{price}}">{{screen_settings.rental_price_range_options[price]}}
+                </option>
+            </select>
+            <label class="checkLabel">to</label>
+            <select id="rental_priceHigh" ng-model="rentalPriceHigh">
+                <option value="">Select...</option>
+                <option ng-repeat="price in screen_settings.rental_price_range_option_keys"
+                        ng-show="price * 1 > rentalPriceLow"
+                        value="{{price}}">{{screen_settings.rental_price_range_options[price]}}
+                </option>
+            </select>
+        </div>
+
+        <div class="links">
+            <a ng-click="search()" class="button">Search</a>
+        </div>
+    </form>
+</div>
+<div class="right">
+    <h1 class="screenTitle">{{'POPULAR_SEARCHES' | translate}}</h1>
+
+    <div class="grid" id="popularSearchGrid">
+        <a ng-repeat="saved_search in saved_searches | filter:{ includeOnSearchForm: 1 }" ng-style="searchBtnStyle()"
+           ng-click="doSearchByID(saved_search.savedSearchId)"
+           class="button">{{saved_search.savedSearchLabel}}</a>
+    </div>
+</div>
+

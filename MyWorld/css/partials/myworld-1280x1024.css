@@ -1,0 +1,217 @@
+/*@import "compass/css3/box-shadow";*/
+body {
+  width: 1280px;
+  height: 1024px; }
+
+#page-wrapper {
+  width: 1280px;
+  height: 1024px; }
+
+#view {
+  height: 600px;
+  margin: 15px 30px 0;
+  width: 1220px;
+  top: 0px; }
+
+#header {
+  height: 120px; }
+  #header .buttons {
+    top: 40px;
+    right: 60px; }
+    #header .buttons .button {
+      margin-right: 20px;
+      padding: 10px; }
+
+#footer {
+  height: 120px; }
+
+a.button, a.small-button {
+  font-size: 12px;
+  padding: 5px;
+  width: 100px;
+  height: 16px;
+  line-height: 16px;
+  border-radius: 8px; }
+
+#homeScreenGrid {
+  margin: 100px 350px;
+  width: 800px; }
+
+#popularSearchGrid a.button {
+  font-size: 12px;
+  padding: 5px;
+  width: 180px;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 8px; }
+
+#propertyButtons.buttons {
+  height: 600px;
+  width: 450px;
+  margin: -30px -570px;
+  padding: 25px;
+  margin-left: 20px; }
+  #propertyButtons.buttons .button {
+    margin: 10px;
+    margin-left: 10px;
+    line-height: 58px; }
+    #propertyButtons.buttons .button.button-text {
+      font-size: 24px;
+      height: 55px;
+      width: 220px;
+      bottom: 20px;
+      border-radius: 10px; }
+    #propertyButtons.buttons .button.button-custom-image {
+      width: inherit;
+      height: inherit; }
+
+#propertyScreenPanel {
+  width: 550px;
+  height: 450px; }
+  #propertyScreenPanel #page-wrapper {
+    width: 550px;
+    height: 450px; }
+  #propertyScreenPanel #propertyPhoto img {
+    width: 550px;
+    height: 450px; }
+    #propertyScreenPanel #propertyPhoto img #page-wrapper {
+      width: 550px;
+      height: 450px; }
+
+#propertyGallery {
+  width: 650px;
+  height: 450px; }
+  #propertyGallery #page-wrapper {
+    width: 650px;
+    height: 450px; }
+  #propertyGallery .propertyImg {
+    max-height: 120px;
+    max-width: 140px;
+    margin: 5px 5px; }
+
+#map div {
+  width: 550px;
+  height: 450px; }
+  #map div #page-wrapper {
+    width: 550px;
+    height: 450px; }
+
+/*
+@supports (display: flex) and (display: grid) {
+    // you know the drill
+	#propertyDescriptions
+	{
+		height: 400px;
+		width: 280px;
+		margin: 0px -100px;
+		padding: 25px;
+		
+	}
+}
+*/
+@supports (display: -webkit-flex) or (display: -moz-flex) or (display: flex) {
+  #propertyDescriptions {
+    /*display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;*/
+    height: 400px;
+    width: 280px;
+    margin: 0px 350px;
+    padding: 25px; } }
+/*
+@supports not (display: flex) {
+  // provide alternative layout
+  // with floats perhaps
+  #propertyDescriptions
+	{
+		height: 400px;
+		width: 280px;
+		margin: 0px 100px;
+		padding: 25px;
+		
+	}
+}
+*/
+@supports (display: grid) {
+  #propertyDescriptions {
+    height: 400px;
+    width: 280px;
+    margin: 0px 350px;
+    padding: 25px; }
+
+  #propertyGrid {
+    margin: 150px -500px;
+    width: 1600px;
+    height: 300px; }
+    #propertyGrid #page-wrapper {
+      width: 1600px;
+      height: 300px; } }
+#savedSearch {
+  margin: 200px 250px 0;
+  width: 1000px; }
+  #savedSearch a.button {
+    font-size: 20px;
+    padding: 5px;
+    width: 350px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 12px; }
+
+#searchResultGrid {
+  height: 550px;
+  margin: 200px 40px 0;
+  width: 1200px; }
+  #searchResultGrid a {
+    height: 260px;
+    margin-bottom: 20px; }
+    #searchResultGrid a img {
+      height: 150px;
+      margin: 15px; }
+  #searchResultGrid a * {
+    font-size: 14px;
+    width: 170px; }
+
+#propertySearchform .searchFormElements {
+  width: 400px;
+  height: 40px;
+  line-height: 40px; }
+  #propertySearchform .searchFormElements #page-wrapper {
+    width: 400px;
+    height: 40px; }
+#propertySearchform input[type="radio"] {
+  /*@include setLayout(30px, 30px);*/ }
+#propertySearchform .links {
+  margin-top: 10px; }
+
+input[type=radio] {
+  border: 5px black solid;
+  border-radius: 25px;
+  width: 25px;
+  height: 25px; }
+
+.componentLabel {
+  font-size: 20px;
+  font-weight: bold; }
+
+select {
+  width: 150px;
+  height: 30px;
+  font-size: 16px; }
+
+#footer {
+  height: 150px; }
+  #footer a {
+    margin: 0px 370px; }
+
+.slideshow {
+  list-style: none;
+  position: relative;
+  margin: 520px 210px; }
+
+ul.slideshow li {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: inline; }

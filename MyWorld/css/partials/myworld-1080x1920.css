@@ -1,0 +1,284 @@
+/*@import "compass/css3/box-shadow";*/
+#header {
+  height: 120px; }
+  #header #languages {
+    top: 40px;
+    left: 60px;
+    width: auto; }
+  #header .buttons {
+    top: 40px;
+    right: 60px; }
+
+#footer {
+  height: 120px; }
+
+a.button, a.small-button {
+  font-size: 16px;
+  padding: 5px;
+  width: 130px;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 8px; }
+
+#homeScreenGrid.stacked {
+  margin-top: 100px; }
+
+.search-screen #view .right {
+  right: 0px;
+  width: 520px; }
+
+#popularSearchGrid a.button {
+  font-size: 20px;
+  padding: 8px;
+  width: 250px;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 8px;
+  width: 215px;
+  height: 24px;
+  line-height: 24px;
+  margin: 8px 10px;
+  display: inline-block; }
+
+.property-screen #view {
+  width: 1080px;
+  height: 1920px; }
+  .property-screen #view #page-wrapper {
+    width: 1080px;
+    height: 1920px; }
+  .property-screen #view #contact-form form {
+    top: 100px;
+    left: 200px; }
+  .property-screen #view #propertyButtons.buttons {
+    height: inherit;
+    width: 400px;
+    margin: 0;
+    position: absolute;
+    top: 750px;
+    left: 50px;
+    padding: 0; }
+    .property-screen #view #propertyButtons.buttons .button {
+      margin: 10px;
+      margin: 15px;
+      margin-left: 10px;
+      line-height: 2.1em;
+      width: 100%;
+      height: 50px;
+      font-size: 1.6em; }
+      .property-screen #view #propertyButtons.buttons .button.button-text {
+        font-size: 30px;
+        height: 60px;
+        width: 400px;
+        bottom: 20px;
+        border-radius: 10px; }
+      .property-screen #view #propertyButtons.buttons .button.button-custom-image {
+        width: inherit;
+        height: inherit; }
+  .property-screen #view .panel #propertyGallery {
+    width: 970px;
+    height: 650px; }
+    .property-screen #view .panel #propertyGallery #page-wrapper {
+      width: 970px;
+      height: 650px; }
+    .property-screen #view .panel #propertyGallery .propertyGalleryItem {
+      display: inline-block;
+      text-align: center;
+      width: 250px; }
+      .property-screen #view .panel #propertyGallery .propertyGalleryItem .propertyImg {
+        max-height: 145px; }
+  .property-screen #view #propertyGrid {
+    top: 1170px;
+    left: 40px; }
+  .property-screen #view #propertyScreenPanel {
+    width: 970px;
+    height: 650px;
+    position: absolute;
+    top: 50px; }
+    .property-screen #view #propertyScreenPanel #page-wrapper {
+      width: 970px;
+      height: 650px; }
+    .property-screen #view #propertyScreenPanel #propertyPhoto img {
+      width: 970px;
+      height: 650px; }
+      .property-screen #view #propertyScreenPanel #propertyPhoto img #page-wrapper {
+        width: 970px;
+        height: 650px; }
+  .property-screen #view .description {
+    height: 320px;
+    width: 430px;
+    top: 750px; }
+
+.saved_searches-screen #view #savedSearch {
+  margin: 250px 80px 0;
+  width: 1000px; }
+  .saved_searches-screen #view #savedSearch a.button {
+    font-size: 20px;
+    padding: 5px;
+    width: 350px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 12px;
+    font-size: 30px;
+    width: 400px;
+    height: 60px;
+    line-height: 60px;
+    margin: 20px; }
+
+#searchResultGrid, #featuredGrid, #galleryGrid {
+  height: 950px;
+  margin: 200px 40px 0;
+  width: 1000px; }
+  #searchResultGrid a, #featuredGrid a, #galleryGrid a {
+    height: 220px;
+    margin-bottom: 20px; }
+    #searchResultGrid a img, #featuredGrid a img, #galleryGrid a img {
+      height: 110px;
+      margin: 15px; }
+  #searchResultGrid a *, #featuredGrid a *, #galleryGrid a * {
+    font-size: 14px;
+    width: 135px; }
+  #searchResultGrid .navbtn, #featuredGrid .navbtn, #galleryGrid .navbtn {
+    margin-top: 450px; }
+
+#searchResultGrid #prevBtn, #searchResultGrid #prevFeaturedBtn, #featuredGrid #prevBtn, #featuredGrid #prevFeaturedBtn {
+  margin-left: -40px;
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-right: 50px solid white;
+  border-bottom: 25px solid transparent; }
+#searchResultGrid #nxtBtn, #searchResultGrid #nxtFeaturedBtn, #featuredGrid #nxtBtn, #featuredGrid #nxtFeaturedBtn {
+  margin-left: 990px;
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-left: 50px solid white;
+  border-bottom: 25px solid transparent; }
+
+#propertySearchform .searchFormElements {
+  width: 600px;
+  height: 40px;
+  line-height: 40px;
+  margin: 20px 0; }
+  #propertySearchform .searchFormElements #page-wrapper {
+    width: 600px;
+    height: 40px; }
+  #propertySearchform .searchFormElements .componentLabel {
+    float: left;
+    width: 150px; }
+#propertySearchform .links {
+  padding: 0px 200px; }
+
+input[type=radio] {
+  border: 5px black solid;
+  border-radius: 25px;
+  width: 25px;
+  height: 25px; }
+
+.componentLabel, .calLabel {
+  font-size: 20px;
+  font-weight: bold; }
+
+.calLabel {
+  width: 250px; }
+
+.radioLabel, .checkLabel {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0px 10px 0px 10px; }
+
+.checkLabel {
+  padding: 0px 10px 0px 10px;
+  float: left; }
+
+#page-wrapper.property-screen #view {
+  top: 175px;
+  position: absolute; }
+
+select {
+  width: 220px;
+  height: 35px;
+  font-size: 16px; }
+
+#rental_price, #rental_priceHigh, #priceMin, #priceMax {
+  width: 150px;
+  height: 35px;
+  font-size: 16px;
+  float: left; }
+
+#footer {
+  height: 150px; }
+  #footer a {
+    margin: 0px 370px; }
+
+#main-logo {
+  top: inherit;
+  bottom: 50px;
+  left: 0px;
+  width: 100%;
+  text-align: center; }
+  #main-logo img {
+    max-width: 400px; }
+
+#slideshow {
+  height: 650px;
+  width: 700px;
+  top: 600px;
+  left: 130px;
+  position: absolute;
+  overflow: hidden; }
+  #slideshow img {
+    width: 700px;
+    height: 650px;
+    position: relative; }
+
+.screensaver {
+  top: -10px; }
+
+.action {
+  height: 1930px;
+  margin-top: 0px; }
+  .action p {
+    margin-top: 900px; }
+
+.request {
+  margin: 200px; }
+  .request .right {
+    margin: 50px 120px; }
+    .request .right form
+    div {
+      display: inline-block;
+      width: 550px;
+      padding-bottom: 10px; }
+      .request .right form
+      div label {
+        float: left;
+        width: 200px; }
+      .request .right form
+      div input[type='number'], .request .right form
+      div input[type='text'] {
+        float: left;
+        width: 200px;
+        height: 30px;
+        font-size: 20px;
+        margin: 0 10px; }
+      .request .right form
+      div span {
+        float: left;
+        font-size: 20px; }
+      .request .right form
+      div button {
+        line-height: 10px;
+        margin: 20px 150px; }
+      .request .right form
+      div .row {
+        margin: 0px 150px; }
+        .request .right form
+        div .row label {
+          margin: 0 10px; }
+        .request .right form
+        div .row span {
+          font-size: 20px; }
+
+#galleryGrid .galleryItem {
+  width: 200px; }

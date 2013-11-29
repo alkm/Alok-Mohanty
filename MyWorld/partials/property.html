@@ -1,0 +1,79 @@
+<div class="property-wrapper" ng-show="viewMode == 'property'">
+    <div class="panel" id="propertyScreenPanel">
+        <div class="photo" id="propertyPhoto" ng-init="view = 'photo'" ng-show="view == 'photo'">
+            <img ng-src="{{primary_photo.url}}"/>
+        </div>
+        <div class="map" id="map" ng-show="view == 'map'"></div>
+        <div class="contact-form" id="contact-form" ng-show="view == 'contact_form'">
+            <h1 align="center">{{'REQUEST_MORE_INFORMATION' | translate}}</h1>
+
+            <div class="right">
+                <form>
+                    <div class="form-field">
+                        <div class="field-label">
+                            <label for="email">{{'EMAIL_ADDRESS' | translate}}</label>
+                        </div>
+                        <div class="field-widget">
+                            <input type="text" id="email" name="email" ng-model="form.email"
+                                   ng-attr-placeholder="{{'EMAIL_ADDRESS' | translate}}">
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <div class="field-label">
+                            <label for="phone">{{'CELL_PHONE_NUMBER_OPTIONAL' | translate}}</label>
+                        </div>
+                        <div class="field-widget">
+                            <input type="text" id="phone" name="phone" ng-model="form.phone"
+                                   ng-attr-placeholder="{{'PHONE_NUMBER' | translate}}">
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <div class="field-label">
+                            <label for="name">{{'NAME_OPTIONAL' | translate}}</label>
+                        </div>
+                        <div class="field-widget">
+                            <input type="text" id="name" name="name" ng-model="form.name"
+                                   ng-attr-placeholder="{{'NAME' | translate}}">
+                        </div>
+                    </div>
+
+                    <div class="form-field buttons">
+                        <div class="field-label">
+                        </div>
+                        <div class="field-widget">
+                            <a class="button" ng-click="submitForm()">{{'SUBMIT' | translate}}</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="gallery" id="propertyGallery" ng-show="view == 'gallery'">
+            <div class="propertyGalleryItem">
+                <img class="propertyImg" ng-repeat="photo in photos" ng-src="{{photo.thumbnail_url}}"/>
+            </div>
+        </div>
+    </div>
+    <div class="buttons" id="propertyButtons">
+        <a class="button" ng-click="view = 'photo'">{{'PHOTO_VIEW' | translate}}</a>
+        <a class="button" ng-click="view = 'map'">{{'MAP_VIEW' | translate}}</a>
+        <a class="button" ng-click="view = 'gallery'">{{'PICTURE_GALLERY' | translate}}</a>
+        <a class="button email-button" ng-click="view = 'contact_form'" ng-style="emailBtnStyle()">{{'EMAIL_THIS' |
+            translate}}</a>
+    </div>
+    <div class="description" id="propertyDescriptions">
+        <span>{{title}}</span>
+
+        <div ng-bind-html="property | formatPropertyDescription:this"></div>
+    </div>
+    <div class="grid" id="propertyGrid">
+        <span ng-repeat="property in properties | limitTo:5" ng-include="mini_property_template"></span>
+    </div>
+</div>
+
+<div id="find-by-tag-form" ng-show="viewMode == 'form'">
+    <div class="form-inner">
+        <input class="tag" type="text" ng-attr-placeholder="{{ 'ENTER_TAG_NUMBER' | translate }}" ng-model="tag"
+               ng-init="tag = ''"/>
+        <button name="commit" ng-click="findByTag()" ng-disabled="tag == ''">{{ 'FIND' | translate }}</button>
+    </div>
+</div>

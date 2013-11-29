@@ -1,0 +1,12 @@
+<div class="grid" id="featuredGrid">
+    <div>
+        <h2 class="screenTitle"> Showing {{(currentPage*pageSize)+1}}-{{showMaxRange()}} of {{results.length}}</h2>
+    </div>
+    <div class="property" ng-repeat="property in results | startFrom:currentPage*pageSize | limitTo:pageSize"
+         ng-include="mini_property_template"></div>
+    <div class="navbtn" id="prevFeaturedBtn" ng-hide="currentPage == 0" ng-click="currentPage=currentPage-1">
+    </div>
+    <div class="navbtn" id="nxtFeaturedBtn" ng-hide="currentPage >= results.length/pageSize - 1"
+         ng-click="currentPage=currentPage+1">
+    </div>
+</div>

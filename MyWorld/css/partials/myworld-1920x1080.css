@@ -1,0 +1,68 @@
+/*@import "compass/css3/box-shadow";*/
+.registrationFormElements .btnDiv {
+  text-align: center; }
+
+.homeHeader {
+  width: 100%;
+  height: 10%;
+  line-height: 10%;
+  padding-top: 1%; }
+  .homeHeader .mapHeader {
+    width: 40%;
+    float: left;
+    padding-left: 5%; }
+    .homeHeader .mapHeader h3 {
+      text-align: center;
+      text-shadow: 0 0 10px #0000FF;
+      color: white; }
+  .homeHeader .singUpHeader {
+    width: 40%;
+    float: right;
+    padding-right: 5%; }
+    .homeHeader .singUpHeader h3 {
+      text-align: center;
+      text-shadow: 0 0 10px #0000FF;
+      color: white; }
+
+#mapContainer {
+  left: 5%;
+  top: 10%;
+  height: 35%;
+  width: 43%;
+  position: absolute;
+  border: 7px outset white; }
+
+#signUpForm {
+  top: 10%;
+  right: 5%;
+  height: 35%;
+  width: 43%;
+  position: absolute;
+  border: 7px outset white;
+  background-image: -o-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+  background-image: -moz-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.24, #63b8ff), color-stop(0.62, cornflowerblue));
+  background-image: -webkit-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+  background-image: -ms-linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+  background-image: linear-gradient(bottom, #63b8ff 24%, cornflowerblue 62%);
+  background-size: 100% 100%;
+  background-color: #ADB3B8; }
+  #signUpForm #userRegistrationForm {
+    padding-top: 2%; }
+    #signUpForm #userRegistrationForm .registrationFormElements .componentLabel {
+      float: left;
+      width: 48%;
+      color: #FFFFFF;
+      padding-left: 30px; }
+    #signUpForm #userRegistrationForm .registrationFormElements input[type=text], #signUpForm #userRegistrationForm .registrationFormElements input[type=password] {
+      width: 40%; }
+    #signUpForm #userRegistrationForm .registrationFormElements p {
+      text-align: center; }
+
+#simpleSlider {
+  top: 48.7%;
+  left: 5%;
+  height: 40%;
+  width: 89.5%;
+  position: absolute;
+  border: 7px outset white; }

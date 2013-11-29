@@ -1,0 +1,7 @@
+<div class="grid" id="savedSearch">
+    <a ng-style="searchResultBtnStyle()"
+       ng-repeat="saved_search in saved_searches | filter:{ includeInNeighborhoodSearch: 1 }"
+       ng-click="doSearchByID(saved_search.savedSearchId)" class="button">
+        {{saved_search.savedSearchLabel}}
+    </a>
+</div>

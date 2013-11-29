@@ -1,0 +1,253 @@
+@import "mixin/myworld-mixin";
+
+//Setting body dimension
+//setting view layout for 1080x1920 screen
+#view {
+  @include setViewLayout(600px, 15px, -110px, 1900px, 0px);
+  .right {
+    width: 48%;
+    h2 {
+      text-align: center;
+    }
+  }
+  .foot {
+    bottom: 15px;
+  }
+}
+
+//Setting header properties for "1280x1024" 
+#header {
+  height: 120px;
+  .buttons {
+    @include buttons-topright(40px, 60px);
+    .button {
+      @include button-marginpading(20px, 10px);
+    }
+  }
+}
+
+//setting footer properties for "1280x1024"
+#footer {
+  height: 120px;
+}
+
+//Setting footer properties for "1280x1024"
+a.button, a.small-button {
+  @include buttonProperties(12px, 5px, 100px, 16px, 16px, 8px);
+}
+
+//Setting grid buttons in home screen for "1280x1024"
+
+#homeScreenGrid {
+  @include gridProperties(100px, 350px, 800px);
+  a {
+    @include gridBtnProperties(20px, 100px, 30px, 220px, 20px, 20px);
+  }
+}
+
+//Setting properties of popular search grid buttons
+#popularSearchGrid a.button {
+  @include buttonProperties(12px, 5px, 180px, 25px, 25px, 8px);
+
+}
+
+#propertyButtons.buttons {
+  height: 600px;
+  width: 350px;
+  margin: -30px 100px;
+  padding: 25px;
+  .button {
+    @include gridBtnProperties(20px, 40px, 10px, 180px, 20px, 10px);
+    margin-left: 10px;
+    line-height: 40px;
+  }
+}
+
+#propertyScreenPanel {
+  @include setLayout(450px, 350px);
+  #propertyPhoto {
+    img {
+      margin-left: 120px;
+      @include setLayout(450px, 350px);
+    }
+  }
+
+}
+
+#propertyGallery {
+  @include setLayout(450px, 50px);
+  margin-left: 120px;
+  .propertyImg {
+    max-height: 80px;
+    max-width: 100px;
+    margin: 5px 5px;
+  }
+}
+
+#map div {
+  @include setLayout(450px, 350px);
+  margin-left: 120px;
+}
+
+/*
+@supports (display: flex) and (display: grid) {
+    // you know the drill
+	#propertyDescriptions
+	{
+		height: 350px;
+		width: 250px;
+		margin: -590px 800px;
+		padding: 25px;
+		
+	}
+}
+*/
+
+@supports (display: -webkit-flex) or
+          (display: -moz-flex) or
+          (display: flex) {
+  #propertyDescriptions {
+    /*display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;*/
+	height: 350px;
+	width: 250px;
+	margin: -590px 800px;
+	padding: 25px;
+  }  
+
+	#propertyGrid
+	{
+		margin: -200px 150px;
+		@include setLayout(1600px, 300px);
+		img
+		{
+			height: 100px;
+		}
+		a *
+		{
+			width: 120px;
+			font-size: 16px;
+		}
+	}  
+}
+/*
+@supports not (display: flex) {
+  // provide alternative layout
+  // with floats perhaps
+  #propertyDescriptions
+	{
+		height: 350px;
+		width: 250px;
+		margin: -590px 800px;
+		padding: 25px;
+		
+	}
+}
+*/
+@supports (display: grid) {
+	#propertyDescriptions
+	{
+		height: 350px;
+		width: 250px;
+		margin: -590px 800px;
+		padding: 25px;
+		
+	}
+	#propertyGrid
+	{
+		margin: -200px 150px;
+		@include setLayout(1600px, 300px);
+		img
+		{
+			height: 100px;
+		}
+		a *
+		{
+			width: 120px;
+			font-size: 16px;
+		}
+	}
+}
+
+//Setting button properties in saved search screen
+#savedSearch {
+  //setting saved search gfrid Style
+  @include setSavedSearchGrid(0px, 250px, 1000px);
+  a.button {
+    @include buttonProperties(20px, 5px, 350px, 35px, 35px, 12px);
+  }
+}
+
+//Search result grid style
+///////////////////////////////
+#searchResultGrid {
+  @include searchResultGridStyle(450px, 200px, 140px, 1000px);
+  a {
+    @include searchResultIconStyle(260px, -40px);
+    img {
+      @include searchResultIconImageStyle(110px, 15px);
+    }
+  }
+  a * {
+    @include searchResultStarIconStyle(14px, 130px);
+  }
+}
+
+//Setting property search form
+#propertySearchform {
+  .searchFormElements {
+    @include setLayout(400px, 40px);
+    line-height: 40px;
+  }
+  input[type="radio"] {
+    /*@include setLayout(30px, 30px);*/
+  }
+  .links {
+    margin-top: 10px;
+  }
+}
+
+//Setting radio button size
+input[type=radio] {
+  @include setRadioInput(5px, 25px, 25px, 25px);
+}
+
+.componentLabel {
+  @include setComponentLabel(20px, bold);
+}
+
+//Setting select box
+select {
+  @include setSelectBox(150px, 30px, 16px);
+}
+
+//Setting Footer logo
+#footer {
+  height: 150px;
+  a {
+    @include seFooterLogo(0px, 370px);
+  }
+
+}
+
+//Setting screen saver style
+.slideshow {
+
+  list-style: none;
+  position: relative;
+  margin: 520px 210px;
+}
+
+ul.slideshow li {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: inline;
+}
+
+ul.slideshow li.show {
+
+}

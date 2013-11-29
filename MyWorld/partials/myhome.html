@@ -1,0 +1,7 @@
+<div class="myHome">
+    <div id="chatContainer" ng-include="my_chat_component"></div>
+    <div id="chatParentWindow">
+        <div id="chatWindowContainer" ng-repeat="window in chatWindows" ng-include="my_chat_window"/>
+    </div>
+</div>
+

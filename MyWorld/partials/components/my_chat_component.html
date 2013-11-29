@@ -1,0 +1,18 @@
+<div class="myChat" ng-controller="ChatController">
+    <div class="chatHeader">
+        <p class="welcomeUser">{{welcomeUser}}</p>
+    </div>
+    <div class="chatList">
+        <div class="chatItem" ng-repeat="item in chatElements" ng-click="openChatWindow(item)">
+            <img class="buddyImage" src="images/chat/default.jpg"/>
+            <label class="componentLabel">{{item.email}}</label>
+        </div>
+    </div>
+    <div class="chatFooter">
+        <input type="text" class="searchFriend">
+    </div>
+</div>
+
+
+
+
